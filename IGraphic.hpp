@@ -95,4 +95,10 @@ namespace Arcade {
     };
 }
 
+using GLibPtr = std::unique_ptr<Arcade::Graphic>;
+
+extern "C" {
+    GLibPtr getGraphicalLibrary();
+}
+
 #endif //OOP_ARCADE_2018_RENDERI_HPP
