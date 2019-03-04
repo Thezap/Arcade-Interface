@@ -10,15 +10,21 @@
 
 #include <cstdint>
 #include <string>
+#include <memory>
+#include <list>
 
 namespace Arcade {
 
     namespace Graphic {
 
-        class IVertex {
+        class IGraphicalElement {
+            virtual void copy(const IGraphicalElement &elem) = 0;
+        };
+
+        class IVertex : public IGraphicalElement {
         public:
             virtual ~IVertex() = default;
-            virtual void copy(const IVertex &window) = 0;
+            virtual void copy(const IVertex &vertex) = 0;
 
             virtual int64_t getX() const = 0;
             virtual int64_t getY() const = 0;
@@ -26,10 +32,10 @@ namespace Arcade {
             virtual void setY(const int64_t &Y) = 0;
         };
 
-        class IColor {
+        class IColor : public IGraphicalElement {
         public:
             virtual ~IColor() = default;
-            virtual void copy(const IColor &window) = 0;
+            virtual void copy(const IColor &color) = 0;
 
             virtual uint32_t getColor() const = 0;
             virtual uint8_t getRed() const = 0;
@@ -40,22 +46,22 @@ namespace Arcade {
             virtual void setColor(uint32_t color) = 0;
         };
 
-        class IFont {
+        class IFont : public IGraphicalElement {
         public:
             virtual ~IFont() = default;
         };
 
-        class IText {
+        class IText : public IGraphicalElement {
         public:
             virtual ~IText() = default;
         };
 
-        class ITexture {
+        class ITexture : public IGraphicalElement {
         public:
             virtual ~ITexture() = default;
         };
 
-        class ISprite {
+        class ISprite : public IGraphicalElement {
         public:
             virtual ~ISprite() = default;
 
@@ -64,12 +70,12 @@ namespace Arcade {
             virtual const ITexture &getTexture() const = 0;
         };
 
-        class IShape {
+        class IShape : IGraphicalElement {
         public:
             virtual ~IShape() = default;
         };
 
-        class IWindow {
+        class IWindow : IGraphicalElement {
         public:
             virtual ~IWindow() = default;
             virtual void copy(const IWindow &window) = 0;
@@ -88,14 +94,12 @@ namespace Arcade {
             virtual void draw(const IShape &shape) = 0;
             virtual void draw(const IText &text) = 0;
             virtual void draw(const ISprite &sprite) = 0;
-
         };
 
-
-    };
+    }
 }
 
-using GLibPtr = std::unique_ptr<Arcade::Graphic>;
+using GLibPtr = std::unique_ptr<Arcade::Graphic::EntityManager>;
 
 extern "C" {
     GLibPtr getGraphicalLibrary();
