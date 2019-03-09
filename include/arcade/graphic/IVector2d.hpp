@@ -18,22 +18,22 @@ public:
    */
   virtual ~IVector2i() = default;
   /**
-   * get X from vector as int
+   * Get X from vector as int
    * @return X
    */
   virtual int64_t getX() const = 0;
   /**
-   * set a new X int value in vector
+   * Set a new X int value in vector
    * @param x new X value
    */
   virtual void setX(int64_t x) = 0;
   /**
-   * get Y from vector as int
+   * Get Y from vector as int
    * @return Y
    */
   virtual int64_t getY() const = 0;
   /**
-   * set a new Y int value in vector
+   * Set a new Y int value in vector
    * @param y new Y value
    */
   virtual void setY(int64_t y) = 0;
@@ -47,26 +47,26 @@ class IVector2f
 {
 public:
   /**
-   * default desctructor
+   * Default desctructor
    */
   virtual ~IVector2f() = default;
   /**
-   * get X from vector as float
+   * Get X from vector as float
    * @return X
    */
   virtual float getX() const = 0;
   /**
-   * set a new X float value in vector
+   * Set a new X float value in vector
    * @param x new X value
    */
   virtual void setX(float x) = 0;
   /**
-   * get Y from vector as float
+   * Get Y from vector as float
    * @return Y
    */
   virtual float getY() const = 0;
   /**
-   * set a new Y float value in vector
+   * Set a new Y float value in vector
    * @param y new Y value
    */
   virtual void setY(float y) = 0;
