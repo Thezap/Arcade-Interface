@@ -1,0 +1,137 @@
+\hypertarget{classarcade_1_1graphic_1_1_i_sprite}{}\section{arcade\+::graphic\+::I\+Sprite Class Reference}
+\label{classarcade_1_1graphic_1_1_i_sprite}\index{arcade::graphic::ISprite@{arcade::graphic::ISprite}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classarcade_1_1graphic_1_1_i_sprite_a3746d3ae251a8377d4156c27dfe66a8c}{set\+Color}} (const \mbox{\hyperlink{classarcade_1_1graphic_1_1_i_color}{I\+Color}} \&color)=0
+\item 
+virtual \mbox{\hyperlink{classarcade_1_1graphic_1_1_i_color}{I\+Color}} \mbox{\hyperlink{classarcade_1_1graphic_1_1_i_sprite_ac1d2f9de8387466857b06ad49bacae45}{get\+Color}} () const =0
+\item 
+virtual void \mbox{\hyperlink{classarcade_1_1graphic_1_1_i_sprite_ad8b153b29798676f0ff3895713e11e1a}{set\+Texture}} (Texture\+Ptr texture)=0
+\item 
+virtual const Texture\+Ptr \mbox{\hyperlink{classarcade_1_1graphic_1_1_i_sprite_a7e2a1006497060ad69d01055c2308967}{get\+Texture}} () const =0
+\item 
+virtual void \mbox{\hyperlink{classarcade_1_1graphic_1_1_i_sprite_a72f62ffd389e825c7791fa034eb8c22e}{set\+Texture\+Rect}} (const \mbox{\hyperlink{classarcade_1_1graphic_1_1_i_rectangle}{I\+Rectangle}} \&rect)=0
+\item 
+virtual void \mbox{\hyperlink{classarcade_1_1graphic_1_1_i_sprite_a51a53315af10283b414cb318a0a940ff}{set\+Position}} (const \mbox{\hyperlink{classarcade_1_1graphic_1_1_i_vector2f}{I\+Vector2f}} \&position)=0
+\item 
+virtual void \mbox{\hyperlink{classarcade_1_1graphic_1_1_i_sprite_ae311414d5a500f18d66a201cc0063681}{move}} (float x\+Off, float y\+Off)=0
+\item 
+virtual I\+Vertex \mbox{\hyperlink{classarcade_1_1graphic_1_1_i_sprite_a44047f1697c3bebbf808a239677d33e1}{get\+Position}} () const =0
+\item 
+virtual void \mbox{\hyperlink{classarcade_1_1graphic_1_1_i_sprite_a8290c8345bc4ab3d3a20a7539bf3808e}{set\+Rotation}} (float angle)=0
+\item 
+virtual float \mbox{\hyperlink{classarcade_1_1graphic_1_1_i_sprite_a2ea4c49f5da9b17a500074ab1378f7ff}{get\+Rotation}} () const =0
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classarcade_1_1graphic_1_1_i_sprite_ac1d2f9de8387466857b06ad49bacae45}\label{classarcade_1_1graphic_1_1_i_sprite_ac1d2f9de8387466857b06ad49bacae45}} 
+\index{arcade::graphic::ISprite@{arcade::graphic::ISprite}!getColor@{getColor}}
+\index{getColor@{getColor}!arcade::graphic::ISprite@{arcade::graphic::ISprite}}
+\subsubsection{\texorpdfstring{getColor()}{getColor()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classarcade_1_1graphic_1_1_i_color}{I\+Color}} arcade\+::graphic\+::\+I\+Sprite\+::get\+Color (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Get the global color of the sprite \begin{DoxyReturn}{Returns}
+Return the sprite\textquotesingle{}s color 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classarcade_1_1graphic_1_1_i_sprite_a44047f1697c3bebbf808a239677d33e1}\label{classarcade_1_1graphic_1_1_i_sprite_a44047f1697c3bebbf808a239677d33e1}} 
+\index{arcade::graphic::ISprite@{arcade::graphic::ISprite}!getPosition@{getPosition}}
+\index{getPosition@{getPosition}!arcade::graphic::ISprite@{arcade::graphic::ISprite}}
+\subsubsection{\texorpdfstring{getPosition()}{getPosition()}}
+{\footnotesize\ttfamily virtual I\+Vertex arcade\+::graphic\+::\+I\+Sprite\+::get\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Get the sprite position \begin{DoxyReturn}{Returns}
+The position where the sprite will be rendered 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classarcade_1_1graphic_1_1_i_sprite_a2ea4c49f5da9b17a500074ab1378f7ff}\label{classarcade_1_1graphic_1_1_i_sprite_a2ea4c49f5da9b17a500074ab1378f7ff}} 
+\index{arcade::graphic::ISprite@{arcade::graphic::ISprite}!getRotation@{getRotation}}
+\index{getRotation@{getRotation}!arcade::graphic::ISprite@{arcade::graphic::ISprite}}
+\subsubsection{\texorpdfstring{getRotation()}{getRotation()}}
+{\footnotesize\ttfamily virtual float arcade\+::graphic\+::\+I\+Sprite\+::get\+Rotation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Get the current orientation angle of the displayed sprite \begin{DoxyReturn}{Returns}
+The sprite\textquotesingle{}s angle between \mbox{[}0, 360\mbox{]} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classarcade_1_1graphic_1_1_i_sprite_a7e2a1006497060ad69d01055c2308967}\label{classarcade_1_1graphic_1_1_i_sprite_a7e2a1006497060ad69d01055c2308967}} 
+\index{arcade::graphic::ISprite@{arcade::graphic::ISprite}!getTexture@{getTexture}}
+\index{getTexture@{getTexture}!arcade::graphic::ISprite@{arcade::graphic::ISprite}}
+\subsubsection{\texorpdfstring{getTexture()}{getTexture()}}
+{\footnotesize\ttfamily virtual const Texture\+Ptr arcade\+::graphic\+::\+I\+Sprite\+::get\+Texture (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Get sprite\textquotesingle{}s texture \begin{DoxyReturn}{Returns}
+The texture held by the sprite 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classarcade_1_1graphic_1_1_i_sprite_ae311414d5a500f18d66a201cc0063681}\label{classarcade_1_1graphic_1_1_i_sprite_ae311414d5a500f18d66a201cc0063681}} 
+\index{arcade::graphic::ISprite@{arcade::graphic::ISprite}!move@{move}}
+\index{move@{move}!arcade::graphic::ISprite@{arcade::graphic::ISprite}}
+\subsubsection{\texorpdfstring{move()}{move()}}
+{\footnotesize\ttfamily virtual void arcade\+::graphic\+::\+I\+Sprite\+::move (\begin{DoxyParamCaption}\item[{float}]{x\+Off,  }\item[{float}]{y\+Off }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Move the sprite by a given offset 
+\begin{DoxyParams}{Parameters}
+{\em x\+Off} & X axis offset \\
+\hline
+{\em y\+Off} & Y axis offset \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classarcade_1_1graphic_1_1_i_sprite_a3746d3ae251a8377d4156c27dfe66a8c}\label{classarcade_1_1graphic_1_1_i_sprite_a3746d3ae251a8377d4156c27dfe66a8c}} 
+\index{arcade::graphic::ISprite@{arcade::graphic::ISprite}!setColor@{setColor}}
+\index{setColor@{setColor}!arcade::graphic::ISprite@{arcade::graphic::ISprite}}
+\subsubsection{\texorpdfstring{setColor()}{setColor()}}
+{\footnotesize\ttfamily virtual void arcade\+::graphic\+::\+I\+Sprite\+::set\+Color (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classarcade_1_1graphic_1_1_i_color}{I\+Color}} \&}]{color }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Set the global color of the sprite 
+\begin{DoxyParams}{Parameters}
+{\em color} & Color to apply \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classarcade_1_1graphic_1_1_i_sprite_a51a53315af10283b414cb318a0a940ff}\label{classarcade_1_1graphic_1_1_i_sprite_a51a53315af10283b414cb318a0a940ff}} 
+\index{arcade::graphic::ISprite@{arcade::graphic::ISprite}!setPosition@{setPosition}}
+\index{setPosition@{setPosition}!arcade::graphic::ISprite@{arcade::graphic::ISprite}}
+\subsubsection{\texorpdfstring{setPosition()}{setPosition()}}
+{\footnotesize\ttfamily virtual void arcade\+::graphic\+::\+I\+Sprite\+::set\+Position (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classarcade_1_1graphic_1_1_i_vector2f}{I\+Vector2f}} \&}]{position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Change the sprite position 
+\begin{DoxyParams}{Parameters}
+{\em position} & The position where the sprite will be rendered \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classarcade_1_1graphic_1_1_i_sprite_a8290c8345bc4ab3d3a20a7539bf3808e}\label{classarcade_1_1graphic_1_1_i_sprite_a8290c8345bc4ab3d3a20a7539bf3808e}} 
+\index{arcade::graphic::ISprite@{arcade::graphic::ISprite}!setRotation@{setRotation}}
+\index{setRotation@{setRotation}!arcade::graphic::ISprite@{arcade::graphic::ISprite}}
+\subsubsection{\texorpdfstring{setRotation()}{setRotation()}}
+{\footnotesize\ttfamily virtual void arcade\+::graphic\+::\+I\+Sprite\+::set\+Rotation (\begin{DoxyParamCaption}\item[{float}]{angle }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Change the orientation of the current displayed sprite 
+\begin{DoxyParams}{Parameters}
+{\em angle} & The orientation angle between \mbox{[}0, 360\mbox{]} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classarcade_1_1graphic_1_1_i_sprite_ad8b153b29798676f0ff3895713e11e1a}\label{classarcade_1_1graphic_1_1_i_sprite_ad8b153b29798676f0ff3895713e11e1a}} 
+\index{arcade::graphic::ISprite@{arcade::graphic::ISprite}!setTexture@{setTexture}}
+\index{setTexture@{setTexture}!arcade::graphic::ISprite@{arcade::graphic::ISprite}}
+\subsubsection{\texorpdfstring{setTexture()}{setTexture()}}
+{\footnotesize\ttfamily virtual void arcade\+::graphic\+::\+I\+Sprite\+::set\+Texture (\begin{DoxyParamCaption}\item[{Texture\+Ptr}]{texture }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Set sprite\textquotesingle{}s texture 
+\begin{DoxyParams}{Parameters}
+{\em texture} & Sprite\textquotesingle{}s texture used to render \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classarcade_1_1graphic_1_1_i_sprite_a72f62ffd389e825c7791fa034eb8c22e}\label{classarcade_1_1graphic_1_1_i_sprite_a72f62ffd389e825c7791fa034eb8c22e}} 
+\index{arcade::graphic::ISprite@{arcade::graphic::ISprite}!setTextureRect@{setTextureRect}}
+\index{setTextureRect@{setTextureRect}!arcade::graphic::ISprite@{arcade::graphic::ISprite}}
+\subsubsection{\texorpdfstring{setTextureRect()}{setTextureRect()}}
+{\footnotesize\ttfamily virtual void arcade\+::graphic\+::\+I\+Sprite\+::set\+Texture\+Rect (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classarcade_1_1graphic_1_1_i_rectangle}{I\+Rectangle}} \&}]{rect }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Set the area of the texture the sprite should use 
+\begin{DoxyParams}{Parameters}
+{\em rect} & The area represented by a \mbox{\hyperlink{classarcade_1_1graphic_1_1_i_rectangle}{I\+Rectangle}} \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/arcade/graphic/I\+Sprite.\+hpp\end{DoxyCompactItemize}

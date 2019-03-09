@@ -1,0 +1,163 @@
+\hypertarget{classarcade_1_1graphic_1_1_i_window}{}\section{arcade\+::graphic\+::I\+Window Class Reference}
+\label{classarcade_1_1graphic_1_1_i_window}\index{arcade::graphic::IWindow@{arcade::graphic::IWindow}}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{classarcade_1_1graphic_1_1_i_window_aa88d1788d30d459f166dd29dbe5b5f7f}{Cursor\+State}} \{ {\bfseries U\+N\+K\+N\+O\+WN} = -\/1, 
+{\bfseries V\+I\+S\+I\+B\+LE}, 
+{\bfseries I\+N\+V\+I\+S\+I\+B\+LE}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classarcade_1_1graphic_1_1_i_window_a444d8868d9aad4ee0d1a67433a30ffba}{$\sim$\+I\+Window}} ()=default
+\item 
+virtual void \mbox{\hyperlink{classarcade_1_1graphic_1_1_i_window_a151e3e7a42b7635ccfb5b0de903bffa8}{copy}} (const \mbox{\hyperlink{classarcade_1_1graphic_1_1_i_window}{I\+Window}} \&window)=0
+\item 
+virtual const std\+::string \& \mbox{\hyperlink{classarcade_1_1graphic_1_1_i_window_aaf984acf6c057878bc1c24134b897459}{get\+Name}} () const =0
+\item 
+virtual void \mbox{\hyperlink{classarcade_1_1graphic_1_1_i_window_ad9f161f552c15d131661103567b9c9c3}{set\+Name}} (const std\+::string \&name)=0
+\item 
+virtual const \mbox{\hyperlink{classarcade_1_1graphic_1_1_i_vector2i}{I\+Vector2i}} \& \mbox{\hyperlink{classarcade_1_1graphic_1_1_i_window_afe84df5e5cc47ba9d9e277d62f292684}{get\+Size}} () const =0
+\item 
+virtual void \mbox{\hyperlink{classarcade_1_1graphic_1_1_i_window_a4c6258e5dfaf0eb23304ba290d51f750}{set\+Size}} (const \mbox{\hyperlink{classarcade_1_1graphic_1_1_i_vector2i}{I\+Vector2i}} \&size)=0
+\item 
+virtual const bool \mbox{\hyperlink{classarcade_1_1graphic_1_1_i_window_a84eaf98ba609609b445b80618f37b8eb}{has\+Focus}} () const =0
+\item 
+virtual const \mbox{\hyperlink{classarcade_1_1graphic_1_1_i_window_aa88d1788d30d459f166dd29dbe5b5f7f}{Cursor\+State}} \mbox{\hyperlink{classarcade_1_1graphic_1_1_i_window_aed6a4805e9b3ed9cdb42008a4e767778}{cursor\+Is\+Visible}} () const =0
+\item 
+virtual void \mbox{\hyperlink{classarcade_1_1graphic_1_1_i_window_a3191f74f851804b1007f008276ba38b9}{set\+Cursor\+State}} (\mbox{\hyperlink{classarcade_1_1graphic_1_1_i_window_aa88d1788d30d459f166dd29dbe5b5f7f}{Cursor\+State}} state)=0
+\item 
+virtual void \mbox{\hyperlink{classarcade_1_1graphic_1_1_i_window_a11f9f08e00f3393afda503614c0246e0}{draw}} (const \mbox{\hyperlink{classarcade_1_1graphic_1_1_i_text}{I\+Text}} \&text)=0
+\item 
+virtual void \mbox{\hyperlink{classarcade_1_1graphic_1_1_i_window_a13085d82338bc91f9ac24b6430e373e4}{draw}} (const \mbox{\hyperlink{classarcade_1_1graphic_1_1_i_sprite}{I\+Sprite}} \&sprite)=0
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classarcade_1_1graphic_1_1_i_window_aa88d1788d30d459f166dd29dbe5b5f7f}\label{classarcade_1_1graphic_1_1_i_window_aa88d1788d30d459f166dd29dbe5b5f7f}} 
+\index{arcade::graphic::IWindow@{arcade::graphic::IWindow}!CursorState@{CursorState}}
+\index{CursorState@{CursorState}!arcade::graphic::IWindow@{arcade::graphic::IWindow}}
+\subsubsection{\texorpdfstring{CursorState}{CursorState}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classarcade_1_1graphic_1_1_i_window_aa88d1788d30d459f166dd29dbe5b5f7f}{arcade\+::graphic\+::\+I\+Window\+::\+Cursor\+State}}}
+
+Different possible cursor states 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classarcade_1_1graphic_1_1_i_window_a444d8868d9aad4ee0d1a67433a30ffba}\label{classarcade_1_1graphic_1_1_i_window_a444d8868d9aad4ee0d1a67433a30ffba}} 
+\index{arcade::graphic::IWindow@{arcade::graphic::IWindow}!````~IWindow@{$\sim$IWindow}}
+\index{````~IWindow@{$\sim$IWindow}!arcade::graphic::IWindow@{arcade::graphic::IWindow}}
+\subsubsection{\texorpdfstring{$\sim$IWindow()}{~IWindow()}}
+{\footnotesize\ttfamily virtual arcade\+::graphic\+::\+I\+Window\+::$\sim$\+I\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+Default destructor 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classarcade_1_1graphic_1_1_i_window_a151e3e7a42b7635ccfb5b0de903bffa8}\label{classarcade_1_1graphic_1_1_i_window_a151e3e7a42b7635ccfb5b0de903bffa8}} 
+\index{arcade::graphic::IWindow@{arcade::graphic::IWindow}!copy@{copy}}
+\index{copy@{copy}!arcade::graphic::IWindow@{arcade::graphic::IWindow}}
+\subsubsection{\texorpdfstring{copy()}{copy()}}
+{\footnotesize\ttfamily virtual void arcade\+::graphic\+::\+I\+Window\+::copy (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classarcade_1_1graphic_1_1_i_window}{I\+Window}} \&}]{window }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Copy the window 
+\begin{DoxyParams}{Parameters}
+{\em window} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classarcade_1_1graphic_1_1_i_window_aed6a4805e9b3ed9cdb42008a4e767778}\label{classarcade_1_1graphic_1_1_i_window_aed6a4805e9b3ed9cdb42008a4e767778}} 
+\index{arcade::graphic::IWindow@{arcade::graphic::IWindow}!cursorIsVisible@{cursorIsVisible}}
+\index{cursorIsVisible@{cursorIsVisible}!arcade::graphic::IWindow@{arcade::graphic::IWindow}}
+\subsubsection{\texorpdfstring{cursorIsVisible()}{cursorIsVisible()}}
+{\footnotesize\ttfamily virtual const \mbox{\hyperlink{classarcade_1_1graphic_1_1_i_window_aa88d1788d30d459f166dd29dbe5b5f7f}{Cursor\+State}} arcade\+::graphic\+::\+I\+Window\+::cursor\+Is\+Visible (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Tells if the cursor is currently visible \begin{DoxyReturn}{Returns}
+A Cursor\+State digit 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classarcade_1_1graphic_1_1_i_window_a11f9f08e00f3393afda503614c0246e0}\label{classarcade_1_1graphic_1_1_i_window_a11f9f08e00f3393afda503614c0246e0}} 
+\index{arcade::graphic::IWindow@{arcade::graphic::IWindow}!draw@{draw}}
+\index{draw@{draw}!arcade::graphic::IWindow@{arcade::graphic::IWindow}}
+\subsubsection{\texorpdfstring{draw()}{draw()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual void arcade\+::graphic\+::\+I\+Window\+::draw (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classarcade_1_1graphic_1_1_i_text}{I\+Text}} \&}]{text }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Draw a text on the window 
+\begin{DoxyParams}{Parameters}
+{\em text} & The text to display \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classarcade_1_1graphic_1_1_i_window_a13085d82338bc91f9ac24b6430e373e4}\label{classarcade_1_1graphic_1_1_i_window_a13085d82338bc91f9ac24b6430e373e4}} 
+\index{arcade::graphic::IWindow@{arcade::graphic::IWindow}!draw@{draw}}
+\index{draw@{draw}!arcade::graphic::IWindow@{arcade::graphic::IWindow}}
+\subsubsection{\texorpdfstring{draw()}{draw()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual void arcade\+::graphic\+::\+I\+Window\+::draw (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classarcade_1_1graphic_1_1_i_sprite}{I\+Sprite}} \&}]{sprite }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Draw a sprite on the window 
+\begin{DoxyParams}{Parameters}
+{\em sprite} & The sprite to display \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classarcade_1_1graphic_1_1_i_window_aaf984acf6c057878bc1c24134b897459}\label{classarcade_1_1graphic_1_1_i_window_aaf984acf6c057878bc1c24134b897459}} 
+\index{arcade::graphic::IWindow@{arcade::graphic::IWindow}!getName@{getName}}
+\index{getName@{getName}!arcade::graphic::IWindow@{arcade::graphic::IWindow}}
+\subsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily virtual const std\+::string\& arcade\+::graphic\+::\+I\+Window\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Return the window name \begin{DoxyReturn}{Returns}
+Window\textquotesingle{}s name as string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classarcade_1_1graphic_1_1_i_window_afe84df5e5cc47ba9d9e277d62f292684}\label{classarcade_1_1graphic_1_1_i_window_afe84df5e5cc47ba9d9e277d62f292684}} 
+\index{arcade::graphic::IWindow@{arcade::graphic::IWindow}!getSize@{getSize}}
+\index{getSize@{getSize}!arcade::graphic::IWindow@{arcade::graphic::IWindow}}
+\subsubsection{\texorpdfstring{getSize()}{getSize()}}
+{\footnotesize\ttfamily virtual const \mbox{\hyperlink{classarcade_1_1graphic_1_1_i_vector2i}{I\+Vector2i}}\& arcade\+::graphic\+::\+I\+Window\+::get\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Get the window size \begin{DoxyReturn}{Returns}
+The window size 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classarcade_1_1graphic_1_1_i_window_a84eaf98ba609609b445b80618f37b8eb}\label{classarcade_1_1graphic_1_1_i_window_a84eaf98ba609609b445b80618f37b8eb}} 
+\index{arcade::graphic::IWindow@{arcade::graphic::IWindow}!hasFocus@{hasFocus}}
+\index{hasFocus@{hasFocus}!arcade::graphic::IWindow@{arcade::graphic::IWindow}}
+\subsubsection{\texorpdfstring{hasFocus()}{hasFocus()}}
+{\footnotesize\ttfamily virtual const bool arcade\+::graphic\+::\+I\+Window\+::has\+Focus (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Tells if window is current focused by user \begin{DoxyReturn}{Returns}
+True if the window has focus, false if not 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classarcade_1_1graphic_1_1_i_window_a3191f74f851804b1007f008276ba38b9}\label{classarcade_1_1graphic_1_1_i_window_a3191f74f851804b1007f008276ba38b9}} 
+\index{arcade::graphic::IWindow@{arcade::graphic::IWindow}!setCursorState@{setCursorState}}
+\index{setCursorState@{setCursorState}!arcade::graphic::IWindow@{arcade::graphic::IWindow}}
+\subsubsection{\texorpdfstring{setCursorState()}{setCursorState()}}
+{\footnotesize\ttfamily virtual void arcade\+::graphic\+::\+I\+Window\+::set\+Cursor\+State (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classarcade_1_1graphic_1_1_i_window_aa88d1788d30d459f166dd29dbe5b5f7f}{Cursor\+State}}}]{state }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Switch the cursor state using Cursor\+State enumeration 
+\begin{DoxyParams}{Parameters}
+{\em state} & The state to apply to cursor \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classarcade_1_1graphic_1_1_i_window_ad9f161f552c15d131661103567b9c9c3}\label{classarcade_1_1graphic_1_1_i_window_ad9f161f552c15d131661103567b9c9c3}} 
+\index{arcade::graphic::IWindow@{arcade::graphic::IWindow}!setName@{setName}}
+\index{setName@{setName}!arcade::graphic::IWindow@{arcade::graphic::IWindow}}
+\subsubsection{\texorpdfstring{setName()}{setName()}}
+{\footnotesize\ttfamily virtual void arcade\+::graphic\+::\+I\+Window\+::set\+Name (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Set the window name 
+\begin{DoxyParams}{Parameters}
+{\em name} & Name to apply to window \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classarcade_1_1graphic_1_1_i_window_a4c6258e5dfaf0eb23304ba290d51f750}\label{classarcade_1_1graphic_1_1_i_window_a4c6258e5dfaf0eb23304ba290d51f750}} 
+\index{arcade::graphic::IWindow@{arcade::graphic::IWindow}!setSize@{setSize}}
+\index{setSize@{setSize}!arcade::graphic::IWindow@{arcade::graphic::IWindow}}
+\subsubsection{\texorpdfstring{setSize()}{setSize()}}
+{\footnotesize\ttfamily virtual void arcade\+::graphic\+::\+I\+Window\+::set\+Size (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classarcade_1_1graphic_1_1_i_vector2i}{I\+Vector2i}} \&}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Set the window size 
+\begin{DoxyParams}{Parameters}
+{\em size} & Size to apply to window \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/arcade/graphic/I\+Window.\+hpp\end{DoxyCompactItemize}

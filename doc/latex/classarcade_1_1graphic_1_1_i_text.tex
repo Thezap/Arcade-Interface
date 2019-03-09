@@ -1,0 +1,159 @@
+\hypertarget{classarcade_1_1graphic_1_1_i_text}{}\section{arcade\+::graphic\+::I\+Text Class Reference}
+\label{classarcade_1_1graphic_1_1_i_text}\index{arcade::graphic::IText@{arcade::graphic::IText}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classarcade_1_1graphic_1_1_i_text_a311b4292400985ac1b8fe678cc9c639a}{$\sim$\+I\+Text}} ()=default
+\item 
+virtual void \mbox{\hyperlink{classarcade_1_1graphic_1_1_i_text_a782961b4f818490d05fbffd439fb667e}{set\+String}} (const std\+::string \&string)=0
+\item 
+virtual const std\+::string \& \mbox{\hyperlink{classarcade_1_1graphic_1_1_i_text_a15a5ef9ed961cd8f4c596f09ce79f694}{get\+String}} () const =0
+\item 
+virtual void \mbox{\hyperlink{classarcade_1_1graphic_1_1_i_text_afd47effbd52bab68990f16d694b630a6}{set\+Font}} (Font\+Ptr font)=0
+\item 
+virtual Font\+Ptr \mbox{\hyperlink{classarcade_1_1graphic_1_1_i_text_a6370811bf285da57f7780843d6767ace}{get\+Font}} ()=0
+\item 
+virtual void \mbox{\hyperlink{classarcade_1_1graphic_1_1_i_text_a26ba9fb577a40e24a08081dd3f79af34}{set\+Position}} (const \mbox{\hyperlink{classarcade_1_1graphic_1_1_i_vector2f}{I\+Vector2f}} \&vec)=0
+\item 
+virtual \mbox{\hyperlink{classarcade_1_1graphic_1_1_i_vector2f}{I\+Vector2f}} \mbox{\hyperlink{classarcade_1_1graphic_1_1_i_text_a78de4816a5a2f5d8ea85ef30bf5e9a47}{get\+Position}} () const =0
+\item 
+virtual void \mbox{\hyperlink{classarcade_1_1graphic_1_1_i_text_ac15854bcc1c009286a4148ae53e7aa99}{set\+Character\+Size}} (unsigned int size)=0
+\item 
+virtual unsigned int \mbox{\hyperlink{classarcade_1_1graphic_1_1_i_text_a7eaa9a7674acefc362d2d1e6e07ae9dd}{get\+Character\+Size}} () const =0
+\item 
+virtual void \mbox{\hyperlink{classarcade_1_1graphic_1_1_i_text_a1854dd1c560220cba75f132bbcb2c96e}{move}} (float x\+Off, float y\+Off)=0
+\item 
+virtual void \mbox{\hyperlink{classarcade_1_1graphic_1_1_i_text_ae0fe24a144225c000b6359ff4897f14a}{set\+Rotation}} (float angle)=0
+\item 
+virtual float \mbox{\hyperlink{classarcade_1_1graphic_1_1_i_text_a814f9412043c8436ffa4614990d4c653}{get\+Rotation}} () const =0
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classarcade_1_1graphic_1_1_i_text_a311b4292400985ac1b8fe678cc9c639a}\label{classarcade_1_1graphic_1_1_i_text_a311b4292400985ac1b8fe678cc9c639a}} 
+\index{arcade::graphic::IText@{arcade::graphic::IText}!````~IText@{$\sim$IText}}
+\index{````~IText@{$\sim$IText}!arcade::graphic::IText@{arcade::graphic::IText}}
+\subsubsection{\texorpdfstring{$\sim$IText()}{~IText()}}
+{\footnotesize\ttfamily virtual arcade\+::graphic\+::\+I\+Text\+::$\sim$\+I\+Text (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+Default destructor 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classarcade_1_1graphic_1_1_i_text_a7eaa9a7674acefc362d2d1e6e07ae9dd}\label{classarcade_1_1graphic_1_1_i_text_a7eaa9a7674acefc362d2d1e6e07ae9dd}} 
+\index{arcade::graphic::IText@{arcade::graphic::IText}!getCharacterSize@{getCharacterSize}}
+\index{getCharacterSize@{getCharacterSize}!arcade::graphic::IText@{arcade::graphic::IText}}
+\subsubsection{\texorpdfstring{getCharacterSize()}{getCharacterSize()}}
+{\footnotesize\ttfamily virtual unsigned int arcade\+::graphic\+::\+I\+Text\+::get\+Character\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Get the character size \begin{DoxyReturn}{Returns}
+Return character size as unsigned int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classarcade_1_1graphic_1_1_i_text_a6370811bf285da57f7780843d6767ace}\label{classarcade_1_1graphic_1_1_i_text_a6370811bf285da57f7780843d6767ace}} 
+\index{arcade::graphic::IText@{arcade::graphic::IText}!getFont@{getFont}}
+\index{getFont@{getFont}!arcade::graphic::IText@{arcade::graphic::IText}}
+\subsubsection{\texorpdfstring{getFont()}{getFont()}}
+{\footnotesize\ttfamily virtual Font\+Ptr arcade\+::graphic\+::\+I\+Text\+::get\+Font (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Get the text\textquotesingle{}s font \begin{DoxyReturn}{Returns}
+Text\textquotesingle{}s font 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classarcade_1_1graphic_1_1_i_text_a78de4816a5a2f5d8ea85ef30bf5e9a47}\label{classarcade_1_1graphic_1_1_i_text_a78de4816a5a2f5d8ea85ef30bf5e9a47}} 
+\index{arcade::graphic::IText@{arcade::graphic::IText}!getPosition@{getPosition}}
+\index{getPosition@{getPosition}!arcade::graphic::IText@{arcade::graphic::IText}}
+\subsubsection{\texorpdfstring{getPosition()}{getPosition()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classarcade_1_1graphic_1_1_i_vector2f}{I\+Vector2f}} arcade\+::graphic\+::\+I\+Text\+::get\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Get the text\textquotesingle{}s position \begin{DoxyReturn}{Returns}
+Position of the text 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classarcade_1_1graphic_1_1_i_text_a814f9412043c8436ffa4614990d4c653}\label{classarcade_1_1graphic_1_1_i_text_a814f9412043c8436ffa4614990d4c653}} 
+\index{arcade::graphic::IText@{arcade::graphic::IText}!getRotation@{getRotation}}
+\index{getRotation@{getRotation}!arcade::graphic::IText@{arcade::graphic::IText}}
+\subsubsection{\texorpdfstring{getRotation()}{getRotation()}}
+{\footnotesize\ttfamily virtual float arcade\+::graphic\+::\+I\+Text\+::get\+Rotation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Get the current orientation angle of the displayed text \begin{DoxyReturn}{Returns}
+The sprite\textquotesingle{}s angle between \mbox{[}0, 360\mbox{]} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classarcade_1_1graphic_1_1_i_text_a15a5ef9ed961cd8f4c596f09ce79f694}\label{classarcade_1_1graphic_1_1_i_text_a15a5ef9ed961cd8f4c596f09ce79f694}} 
+\index{arcade::graphic::IText@{arcade::graphic::IText}!getString@{getString}}
+\index{getString@{getString}!arcade::graphic::IText@{arcade::graphic::IText}}
+\subsubsection{\texorpdfstring{getString()}{getString()}}
+{\footnotesize\ttfamily virtual const std\+::string\& arcade\+::graphic\+::\+I\+Text\+::get\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Get the text\textquotesingle{}s string \begin{DoxyReturn}{Returns}
+Text\textquotesingle{}s string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classarcade_1_1graphic_1_1_i_text_a1854dd1c560220cba75f132bbcb2c96e}\label{classarcade_1_1graphic_1_1_i_text_a1854dd1c560220cba75f132bbcb2c96e}} 
+\index{arcade::graphic::IText@{arcade::graphic::IText}!move@{move}}
+\index{move@{move}!arcade::graphic::IText@{arcade::graphic::IText}}
+\subsubsection{\texorpdfstring{move()}{move()}}
+{\footnotesize\ttfamily virtual void arcade\+::graphic\+::\+I\+Text\+::move (\begin{DoxyParamCaption}\item[{float}]{x\+Off,  }\item[{float}]{y\+Off }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Move the sprite by a given offset 
+\begin{DoxyParams}{Parameters}
+{\em x\+Off} & X axis offset \\
+\hline
+{\em y\+Off} & Y axis offset \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classarcade_1_1graphic_1_1_i_text_ac15854bcc1c009286a4148ae53e7aa99}\label{classarcade_1_1graphic_1_1_i_text_ac15854bcc1c009286a4148ae53e7aa99}} 
+\index{arcade::graphic::IText@{arcade::graphic::IText}!setCharacterSize@{setCharacterSize}}
+\index{setCharacterSize@{setCharacterSize}!arcade::graphic::IText@{arcade::graphic::IText}}
+\subsubsection{\texorpdfstring{setCharacterSize()}{setCharacterSize()}}
+{\footnotesize\ttfamily virtual void arcade\+::graphic\+::\+I\+Text\+::set\+Character\+Size (\begin{DoxyParamCaption}\item[{unsigned int}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Set the character size of the Text 
+\begin{DoxyParams}{Parameters}
+{\em size} & Size as unsigned integer \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classarcade_1_1graphic_1_1_i_text_afd47effbd52bab68990f16d694b630a6}\label{classarcade_1_1graphic_1_1_i_text_afd47effbd52bab68990f16d694b630a6}} 
+\index{arcade::graphic::IText@{arcade::graphic::IText}!setFont@{setFont}}
+\index{setFont@{setFont}!arcade::graphic::IText@{arcade::graphic::IText}}
+\subsubsection{\texorpdfstring{setFont()}{setFont()}}
+{\footnotesize\ttfamily virtual void arcade\+::graphic\+::\+I\+Text\+::set\+Font (\begin{DoxyParamCaption}\item[{Font\+Ptr}]{font }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Set the text\textquotesingle{}s font 
+\begin{DoxyParams}{Parameters}
+{\em font} & Font to apply to text \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classarcade_1_1graphic_1_1_i_text_a26ba9fb577a40e24a08081dd3f79af34}\label{classarcade_1_1graphic_1_1_i_text_a26ba9fb577a40e24a08081dd3f79af34}} 
+\index{arcade::graphic::IText@{arcade::graphic::IText}!setPosition@{setPosition}}
+\index{setPosition@{setPosition}!arcade::graphic::IText@{arcade::graphic::IText}}
+\subsubsection{\texorpdfstring{setPosition()}{setPosition()}}
+{\footnotesize\ttfamily virtual void arcade\+::graphic\+::\+I\+Text\+::set\+Position (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classarcade_1_1graphic_1_1_i_vector2f}{I\+Vector2f}} \&}]{vec }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Set the text\textquotesingle{}s position 
+\begin{DoxyParams}{Parameters}
+{\em vec} & Position to apply to vector \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classarcade_1_1graphic_1_1_i_text_ae0fe24a144225c000b6359ff4897f14a}\label{classarcade_1_1graphic_1_1_i_text_ae0fe24a144225c000b6359ff4897f14a}} 
+\index{arcade::graphic::IText@{arcade::graphic::IText}!setRotation@{setRotation}}
+\index{setRotation@{setRotation}!arcade::graphic::IText@{arcade::graphic::IText}}
+\subsubsection{\texorpdfstring{setRotation()}{setRotation()}}
+{\footnotesize\ttfamily virtual void arcade\+::graphic\+::\+I\+Text\+::set\+Rotation (\begin{DoxyParamCaption}\item[{float}]{angle }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Change the orientation of the current displayed text 
+\begin{DoxyParams}{Parameters}
+{\em angle} & The orientation angle between \mbox{[}0, 360\mbox{]} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classarcade_1_1graphic_1_1_i_text_a782961b4f818490d05fbffd439fb667e}\label{classarcade_1_1graphic_1_1_i_text_a782961b4f818490d05fbffd439fb667e}} 
+\index{arcade::graphic::IText@{arcade::graphic::IText}!setString@{setString}}
+\index{setString@{setString}!arcade::graphic::IText@{arcade::graphic::IText}}
+\subsubsection{\texorpdfstring{setString()}{setString()}}
+{\footnotesize\ttfamily virtual void arcade\+::graphic\+::\+I\+Text\+::set\+String (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{string }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Set the text\textquotesingle{}s string 
+\begin{DoxyParams}{Parameters}
+{\em string} & String to apply to text \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/arcade/graphic/I\+Text.\+hpp\end{DoxyCompactItemize}
