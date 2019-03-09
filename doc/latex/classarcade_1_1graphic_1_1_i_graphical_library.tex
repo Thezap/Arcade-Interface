@@ -1,0 +1,177 @@
+\hypertarget{classarcade_1_1graphic_1_1_i_graphical_library}{}\section{arcade\+::graphic\+::I\+Graphical\+Library Class Reference}
+\label{classarcade_1_1graphic_1_1_i_graphical_library}\index{arcade::graphic::IGraphicalLibrary@{arcade::graphic::IGraphicalLibrary}}
+
+
+{\ttfamily \#include $<$Graphic.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual Window\+Ptr \mbox{\hyperlink{classarcade_1_1graphic_1_1_i_graphical_library_a98d401c1c0d6829857393e76a472f166}{create\+Window}} ()=0
+\item 
+virtual Texture\+Ptr \mbox{\hyperlink{classarcade_1_1graphic_1_1_i_graphical_library_a034577aa2702771ba0834e1ad98ed5a0}{create\+Texture}} ()=0
+\item 
+virtual Texture\+Ptr \mbox{\hyperlink{classarcade_1_1graphic_1_1_i_graphical_library_a8c14d0d54d1216279ad5c80702f53086}{create\+Texture}} (const std\+::string \&path)=0
+\item 
+virtual Sprite\+Ptr \mbox{\hyperlink{classarcade_1_1graphic_1_1_i_graphical_library_a5701fd02a99c9943972abe2bef53de39}{create\+Sprite}} ()=0
+\item 
+virtual Sprite\+Ptr \mbox{\hyperlink{classarcade_1_1graphic_1_1_i_graphical_library_a22d325c6237cae0543d58e321de675f6}{create\+Sprite}} (Texture\+Ptr texture)=0
+\item 
+virtual \mbox{\hyperlink{classarcade_1_1graphic_1_1_i_color}{I\+Color}} \mbox{\hyperlink{classarcade_1_1graphic_1_1_i_graphical_library_a5ae198a5af194e9546eb7ae09fc4bf20}{create\+Color}} (uint8\+\_\+t red, uint8\+\_\+t green, uint8\+\_\+t blue, uint8\+\_\+t alpha)=0
+\item 
+virtual \mbox{\hyperlink{classarcade_1_1graphic_1_1_i_color}{I\+Color}} \mbox{\hyperlink{classarcade_1_1graphic_1_1_i_graphical_library_aac999a46fab3948f3c896a263f89f0fb}{create\+Color}} (uint32\+\_\+t color)=0
+\item 
+virtual Font\+Ptr \mbox{\hyperlink{classarcade_1_1graphic_1_1_i_graphical_library_a30565d5cc8678c38aa7dc447b9144242}{create\+Font}} (const std\+::string \&path)=0
+\item 
+virtual Text\+Ptr \mbox{\hyperlink{classarcade_1_1graphic_1_1_i_graphical_library_a574563b85a4ed24d884381a31e95e888}{create\+Text}} ()=0
+\item 
+virtual Text\+Ptr \mbox{\hyperlink{classarcade_1_1graphic_1_1_i_graphical_library_ac43fde5e21945aaccba8414dbadcb1ce}{create\+Text}} (I\+Font\+Ptr font)=0
+\item 
+virtual Shape\+Ptr \mbox{\hyperlink{classarcade_1_1graphic_1_1_i_graphical_library_acb195feccab5c859a468a852e5882b09}{create\+Shape}} ()=0
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class representing a shared multimedia library, like S\+F\+ML or S\+DL 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classarcade_1_1graphic_1_1_i_graphical_library_a5ae198a5af194e9546eb7ae09fc4bf20}\label{classarcade_1_1graphic_1_1_i_graphical_library_a5ae198a5af194e9546eb7ae09fc4bf20}} 
+\index{arcade::graphic::IGraphicalLibrary@{arcade::graphic::IGraphicalLibrary}!createColor@{createColor}}
+\index{createColor@{createColor}!arcade::graphic::IGraphicalLibrary@{arcade::graphic::IGraphicalLibrary}}
+\subsubsection{\texorpdfstring{createColor()}{createColor()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classarcade_1_1graphic_1_1_i_color}{I\+Color}} arcade\+::graphic\+::\+I\+Graphical\+Library\+::create\+Color (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{red,  }\item[{uint8\+\_\+t}]{green,  }\item[{uint8\+\_\+t}]{blue,  }\item[{uint8\+\_\+t}]{alpha }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Tells multimedia library to create a new color 
+\begin{DoxyParams}{Parameters}
+{\em red} & Red component between \mbox{[}0, 255\mbox{]} \\
+\hline
+{\em green} & Green component between \mbox{[}0, 255\mbox{]} \\
+\hline
+{\em blue} & Blue component between \mbox{[}0, 255\mbox{]} \\
+\hline
+{\em alpha} & Alpha component between \mbox{[}0, 255\mbox{]} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An \mbox{\hyperlink{classarcade_1_1graphic_1_1_i_color}{I\+Color}} object 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classarcade_1_1graphic_1_1_i_graphical_library_aac999a46fab3948f3c896a263f89f0fb}\label{classarcade_1_1graphic_1_1_i_graphical_library_aac999a46fab3948f3c896a263f89f0fb}} 
+\index{arcade::graphic::IGraphicalLibrary@{arcade::graphic::IGraphicalLibrary}!createColor@{createColor}}
+\index{createColor@{createColor}!arcade::graphic::IGraphicalLibrary@{arcade::graphic::IGraphicalLibrary}}
+\subsubsection{\texorpdfstring{createColor()}{createColor()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classarcade_1_1graphic_1_1_i_color}{I\+Color}} arcade\+::graphic\+::\+I\+Graphical\+Library\+::create\+Color (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{color }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Tells multimedia library to create a new color 
+\begin{DoxyParams}{Parameters}
+{\em color} & Color value inside an unsigned 4 bytes integer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An \mbox{\hyperlink{classarcade_1_1graphic_1_1_i_color}{I\+Color}} object 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classarcade_1_1graphic_1_1_i_graphical_library_a30565d5cc8678c38aa7dc447b9144242}\label{classarcade_1_1graphic_1_1_i_graphical_library_a30565d5cc8678c38aa7dc447b9144242}} 
+\index{arcade::graphic::IGraphicalLibrary@{arcade::graphic::IGraphicalLibrary}!createFont@{createFont}}
+\index{createFont@{createFont}!arcade::graphic::IGraphicalLibrary@{arcade::graphic::IGraphicalLibrary}}
+\subsubsection{\texorpdfstring{createFont()}{createFont()}}
+{\footnotesize\ttfamily virtual Font\+Ptr arcade\+::graphic\+::\+I\+Graphical\+Library\+::create\+Font (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Tells multimedia library to instantiate a new font 
+\begin{DoxyParams}{Parameters}
+{\em path} & Path where the font is located \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new \mbox{\hyperlink{classarcade_1_1graphic_1_1_i_font}{I\+Font}} stored as Font\+Ptr 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classarcade_1_1graphic_1_1_i_graphical_library_acb195feccab5c859a468a852e5882b09}\label{classarcade_1_1graphic_1_1_i_graphical_library_acb195feccab5c859a468a852e5882b09}} 
+\index{arcade::graphic::IGraphicalLibrary@{arcade::graphic::IGraphicalLibrary}!createShape@{createShape}}
+\index{createShape@{createShape}!arcade::graphic::IGraphicalLibrary@{arcade::graphic::IGraphicalLibrary}}
+\subsubsection{\texorpdfstring{createShape()}{createShape()}}
+{\footnotesize\ttfamily virtual Shape\+Ptr arcade\+::graphic\+::\+I\+Graphical\+Library\+::create\+Shape (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Tells multimedia library to instantiate a new shape \begin{DoxyReturn}{Returns}
+A new \mbox{\hyperlink{classarcade_1_1graphic_1_1_i_shape}{I\+Shape}} stored as Shape\+Ptr 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classarcade_1_1graphic_1_1_i_graphical_library_a5701fd02a99c9943972abe2bef53de39}\label{classarcade_1_1graphic_1_1_i_graphical_library_a5701fd02a99c9943972abe2bef53de39}} 
+\index{arcade::graphic::IGraphicalLibrary@{arcade::graphic::IGraphicalLibrary}!createSprite@{createSprite}}
+\index{createSprite@{createSprite}!arcade::graphic::IGraphicalLibrary@{arcade::graphic::IGraphicalLibrary}}
+\subsubsection{\texorpdfstring{createSprite()}{createSprite()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual Sprite\+Ptr arcade\+::graphic\+::\+I\+Graphical\+Library\+::create\+Sprite (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Tells multimedia library to instantiate a new sprite \begin{DoxyReturn}{Returns}
+A new sprite stored inside a Sprite\+Ptr 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classarcade_1_1graphic_1_1_i_graphical_library_a22d325c6237cae0543d58e321de675f6}\label{classarcade_1_1graphic_1_1_i_graphical_library_a22d325c6237cae0543d58e321de675f6}} 
+\index{arcade::graphic::IGraphicalLibrary@{arcade::graphic::IGraphicalLibrary}!createSprite@{createSprite}}
+\index{createSprite@{createSprite}!arcade::graphic::IGraphicalLibrary@{arcade::graphic::IGraphicalLibrary}}
+\subsubsection{\texorpdfstring{createSprite()}{createSprite()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual Sprite\+Ptr arcade\+::graphic\+::\+I\+Graphical\+Library\+::create\+Sprite (\begin{DoxyParamCaption}\item[{Texture\+Ptr}]{texture }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Tells multimedia library to instantiate a new sprite according to a texture (stored as Texture\+Ptr) 
+\begin{DoxyParams}{Parameters}
+{\em texture} & Texture to apply to the new sprite \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new sprite stored inside a Sprite\+Ptr 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classarcade_1_1graphic_1_1_i_graphical_library_a574563b85a4ed24d884381a31e95e888}\label{classarcade_1_1graphic_1_1_i_graphical_library_a574563b85a4ed24d884381a31e95e888}} 
+\index{arcade::graphic::IGraphicalLibrary@{arcade::graphic::IGraphicalLibrary}!createText@{createText}}
+\index{createText@{createText}!arcade::graphic::IGraphicalLibrary@{arcade::graphic::IGraphicalLibrary}}
+\subsubsection{\texorpdfstring{createText()}{createText()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual Text\+Ptr arcade\+::graphic\+::\+I\+Graphical\+Library\+::create\+Text (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Tells multimedia library to instantiate a new text \begin{DoxyReturn}{Returns}
+A new \mbox{\hyperlink{classarcade_1_1graphic_1_1_i_text}{I\+Text}} stored as Text\+Ptr 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classarcade_1_1graphic_1_1_i_graphical_library_ac43fde5e21945aaccba8414dbadcb1ce}\label{classarcade_1_1graphic_1_1_i_graphical_library_ac43fde5e21945aaccba8414dbadcb1ce}} 
+\index{arcade::graphic::IGraphicalLibrary@{arcade::graphic::IGraphicalLibrary}!createText@{createText}}
+\index{createText@{createText}!arcade::graphic::IGraphicalLibrary@{arcade::graphic::IGraphicalLibrary}}
+\subsubsection{\texorpdfstring{createText()}{createText()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual Text\+Ptr arcade\+::graphic\+::\+I\+Graphical\+Library\+::create\+Text (\begin{DoxyParamCaption}\item[{I\+Font\+Ptr}]{font }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Tells multimedia library to instantiate a new text 
+\begin{DoxyParams}{Parameters}
+{\em font} & Font to apply to the new text \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new \mbox{\hyperlink{classarcade_1_1graphic_1_1_i_text}{I\+Text}} stored as Text\+Ptr 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classarcade_1_1graphic_1_1_i_graphical_library_a034577aa2702771ba0834e1ad98ed5a0}\label{classarcade_1_1graphic_1_1_i_graphical_library_a034577aa2702771ba0834e1ad98ed5a0}} 
+\index{arcade::graphic::IGraphicalLibrary@{arcade::graphic::IGraphicalLibrary}!createTexture@{createTexture}}
+\index{createTexture@{createTexture}!arcade::graphic::IGraphicalLibrary@{arcade::graphic::IGraphicalLibrary}}
+\subsubsection{\texorpdfstring{createTexture()}{createTexture()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual Texture\+Ptr arcade\+::graphic\+::\+I\+Graphical\+Library\+::create\+Texture (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Tells multimedia library to instantiate a new texture \begin{DoxyReturn}{Returns}
+A new texture stored inside a Texture\+Ptr 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classarcade_1_1graphic_1_1_i_graphical_library_a8c14d0d54d1216279ad5c80702f53086}\label{classarcade_1_1graphic_1_1_i_graphical_library_a8c14d0d54d1216279ad5c80702f53086}} 
+\index{arcade::graphic::IGraphicalLibrary@{arcade::graphic::IGraphicalLibrary}!createTexture@{createTexture}}
+\index{createTexture@{createTexture}!arcade::graphic::IGraphicalLibrary@{arcade::graphic::IGraphicalLibrary}}
+\subsubsection{\texorpdfstring{createTexture()}{createTexture()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual Texture\+Ptr arcade\+::graphic\+::\+I\+Graphical\+Library\+::create\+Texture (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Tells multimedia library to instantiate a new texture according to a path 
+\begin{DoxyParams}{Parameters}
+{\em path} & Path where the texture is located \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new texture stored inside a Texture\+Ptr 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classarcade_1_1graphic_1_1_i_graphical_library_a98d401c1c0d6829857393e76a472f166}\label{classarcade_1_1graphic_1_1_i_graphical_library_a98d401c1c0d6829857393e76a472f166}} 
+\index{arcade::graphic::IGraphicalLibrary@{arcade::graphic::IGraphicalLibrary}!createWindow@{createWindow}}
+\index{createWindow@{createWindow}!arcade::graphic::IGraphicalLibrary@{arcade::graphic::IGraphicalLibrary}}
+\subsubsection{\texorpdfstring{createWindow()}{createWindow()}}
+{\footnotesize\ttfamily virtual Window\+Ptr arcade\+::graphic\+::\+I\+Graphical\+Library\+::create\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Tells multimedia library to instantiate a window \begin{DoxyReturn}{Returns}
+A new window stored inside a Window\+Ptr 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/arcade/graphic/Graphic.\+hpp\end{DoxyCompactItemize}
