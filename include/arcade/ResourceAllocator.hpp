@@ -11,13 +11,20 @@ namespace arcade
 {
 class ResourceAllocator {
 public:
-  arcade::graphic::ColorPtr createColor();
+  ResourceAllocator();
+  ~ResourceAllocator();
+  ResourceAllocator(ResourceAllocator const &) {};
+  void setGLib(graphic::GLibPtr gLib);
+  arcade::graphic::ColorPtr createColor(uint8_t red, uint8_t green, uint8_t blue, uint8_t alpha);
+  arcade::graphic::ColorPtr createColor(uint32_t color);
   arcade::graphic::WindowPtr createWindow();
   arcade::graphic::ShapePtr createShape();
-  arcade::graphic::SpritePtr createSprite();
+  arcade::graphic::SpritePtr createSprite(arcade::graphic::TexturePtr texture);
   arcade::graphic::TexturePtr createTexture();
+  arcade::graphic::TexturePtr createTexture(const std::string &path);
   arcade::graphic::TextPtr createText();
-  arcade::graphic::FontPtr createFont();
+  arcade::graphic::TextPtr createText(arcade::graphic::FontPtr font);
+  arcade::graphic::FontPtr createFont(const std::string &path);
 
   void copy(const ResourceAllocator &other);
 private:
