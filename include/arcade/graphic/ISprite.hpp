@@ -4,6 +4,7 @@
 
 #pragma once
 
+#include <memory>
 #include "IRectangle.hpp"
 #include "IVector2d.hpp"
 

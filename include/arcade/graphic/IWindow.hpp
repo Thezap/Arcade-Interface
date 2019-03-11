@@ -4,6 +4,7 @@
 
 #pragma once
 
+#include <memory>
 #include "ISprite.hpp"
 #include "IText.hpp"
 

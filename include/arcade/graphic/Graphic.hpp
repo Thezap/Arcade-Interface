@@ -9,9 +9,10 @@
 #include "IRectangle.hpp"
 #include "IShape.hpp"
 #include "ISprite.hpp"
+#include "IFont.hpp"
 #include "IText.hpp"
 #include "ITexture.hpp"
-#include "IVertex.hpp"
+#include "IVector2d.hpp"
 #include "IWindow.hpp"
 
 namespace arcade::graphic
