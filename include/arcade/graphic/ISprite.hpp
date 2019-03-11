@@ -7,6 +7,7 @@
 #include <memory>
 #include "IRectangle.hpp"
 #include "IVector2d.hpp"
+#include "ITexture.hpp"
 
 namespace arcade::graphic
 {
@@ -26,7 +27,7 @@ public:
    * Get the global color of the sprite
    * @return Return the sprite's color
    */
-  virtual IColor getColor() const = 0;
+  virtual ColorPtr getColor() const = 0;
 
   /**
    * Set sprite's texture
@@ -63,7 +64,7 @@ public:
    * Get the sprite position
    * @return The position where the sprite will be rendered
    */
-  virtual IVertex getPosition() const = 0;
+  virtual Vector2fPtr getPosition() const = 0;
 
   /**
    * Change the orientation of the current displayed sprite

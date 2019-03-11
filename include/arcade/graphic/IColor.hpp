@@ -5,6 +5,7 @@
 #pragma once
 
 #include <cstdint>
+#include <memory>
 
 namespace arcade::graphic
 {
@@ -69,5 +70,5 @@ public:
    */
   virtual void setColor(uint32_t color) = 0;
 };
-
+    using ColorPtr = std::shared_ptr<IColor>;
 }

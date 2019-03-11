@@ -54,7 +54,7 @@ public:
    * Get the text's position
    * @return Position of the text
    */
-  virtual IVector2f getPosition() const = 0;
+  virtual Vector2fPtr getPosition() const = 0;
 
   /**
    * Set the character size of the Text

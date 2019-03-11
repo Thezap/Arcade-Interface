@@ -64,14 +64,14 @@ public:
    * @param alpha Alpha component between [0, 255]
    * @return An IColor object
    */
-  virtual IColor createColor(uint8_t red, uint8_t green, uint8_t blue, uint8_t alpha) = 0;
+  virtual ColorPtr createColor(uint8_t red, uint8_t green, uint8_t blue, uint8_t alpha) = 0;
 
   /**
    * Tells multimedia library to create a new color
    * @param color Color value inside an unsigned 4 bytes integer
    * @return An IColor object
    */
-  virtual IColor createColor(uint32_t color) = 0;
+  virtual ColorPtr createColor(uint32_t color) = 0;
 
   /**
    * Tells multimedia library to instantiate a new font
@@ -91,7 +91,7 @@ public:
    * @param font Font to apply to the new text
    * @return A new IText stored as TextPtr
    */
-  virtual TextPtr createText(IFontPtr font) = 0;
+  virtual TextPtr createText(FontPtr font) = 0;
 
   /**
    * Tells multimedia library to instantiate a new shape
