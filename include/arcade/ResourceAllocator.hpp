@@ -5,19 +5,19 @@
 #pragma once
 
 #include "graphic/Graphic.hpp"
+#include <list>
 
 namespace arcade
 {
 class ResourceAllocator {
 public:
-  IVertex createVertex();
-  IColor createColor();
-  WindowPtr createWindow();
-  ShapePtr createShape();
-  SpritePtr createSprite();
-  TexturePtr createTexture();
-  TextPtr createText();
-  FontPtr createFont();
+  arcade::graphic::ColorPtr createColor();
+  arcade::graphic::WindowPtr createWindow();
+  arcade::graphic::ShapePtr createShape();
+  arcade::graphic::SpritePtr createSprite();
+  arcade::graphic::TexturePtr createTexture();
+  arcade::graphic::TextPtr createText();
+  arcade::graphic::FontPtr createFont();
 
   void copy(const ResourceAllocator &other);
 private:
@@ -25,7 +25,6 @@ private:
   std::list<graphic::WindowPtr> _windows;
   std::list<graphic::TexturePtr> _textures;
   std::list<graphic::SpritePtr> _sprites;
-  std::list<graphic::IVertex> _vertexes;
   std::list<graphic::IColor> _colors;
   std::list<graphic::FontPtr> _fonts;
   std::list<graphic::TextPtr> _texts;

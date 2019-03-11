@@ -107,5 +107,5 @@ using GLibPtr = std::unique_ptr<arcade::graphic::IGraphicalLibrary>;
 }
 
 extern "C" {
-arcade::graphic::GLibPtr getGraphicalLibrary();
+  arcade::graphic::GLibPtr getGraphicalLibrary();
 }
