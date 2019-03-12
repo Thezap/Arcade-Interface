@@ -5,6 +5,7 @@
 #pragma once
 
 #include <cstdint>
+#include <memory>
 
 namespace arcade::graphic
 {
@@ -96,4 +97,6 @@ class IRectangle
    */
   virtual void setHeight(int64_t height) = 0;
 };
+
+using RectanglePtr = std::shared_ptr<IRectangle>;
 }

@@ -4,6 +4,9 @@
 
 #pragma once
 
+#include <cstdint>
+#include <memory>
+
 namespace arcade::graphic
 {
 /**
@@ -21,22 +24,22 @@ public:
    * Get X from vector as int
    * @return X
    */
-  virtual int64_t getX() const = 0;
+  virtual int32_t getX() const = 0;
   /**
    * Set a new X int value in vector
    * @param x new X value
    */
-  virtual void setX(int64_t x) = 0;
+  virtual void setX(int32_t x) = 0;
   /**
    * Get Y from vector as int
    * @return Y
    */
-  virtual int64_t getY() const = 0;
+  virtual int32_t getY() const = 0;
   /**
    * Set a new Y int value in vector
    * @param y new Y value
    */
-  virtual void setY(int64_t y) = 0;
+  virtual void setY(int32_t y) = 0;
 };
 
 /**
@@ -71,4 +74,7 @@ public:
    */
   virtual void setY(float y) = 0;
 };
+
+using Vector2iPtr = std::shared_ptr<IVector2i>;
+using Vector2fPtr = std::shared_ptr<IVector2f>;
 }

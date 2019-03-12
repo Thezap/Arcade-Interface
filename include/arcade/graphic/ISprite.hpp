@@ -10,11 +10,12 @@
 #include "IVector2d.hpp"
 #include "IColor.hpp"
 #include "ITexture.hpp"
+#include "IDrawable.hpp"
 
 namespace arcade::graphic
 {
 
-class ISprite
+class ISprite : public IDrawable
 {
 public:
   virtual ~ISprite() = default;
@@ -50,23 +51,10 @@ public:
   virtual void setTextureRect(const IRectangle &rect) = 0;
 
   /**
-   * Change the sprite position
-   * @param position The position where the sprite will be rendered
-   */
-  virtual void setPosition(const IVector2f &position) = 0;
-
-  /**
-   * Move the sprite by a given offset
-   * @param xOff X axis offset
-   * @param yOff Y axis offset
-   */
-  virtual void move(float xOff, float yOff) = 0;
-
-  /**
    * Get the sprite position
    * @return The position where the sprite will be rendered
    */
-  virtual IVector2f getPosition() const = 0;
+  virtual Vector2fPtr getPosition() const = 0;
 
   /**
    * Change the orientation of the current displayed sprite
