@@ -43,12 +43,6 @@ public:
   virtual bool isOpen() const = 0;
 
   /**
-   * Call to refresh the window
-   */
-  virtual void refresh() = 0;
-
-
-  /**
    * Return the window name
    * @return Window's name as string
    */
@@ -105,12 +99,12 @@ public:
   /**
    * Clear the window
    */
-  virtual void clear() const = 0;
+  virtual void clear() = 0;
 
   /**
-   * Refresh the window
+   * Display the window
    */
-  virtual void refresh() const = 0;
+  virtual void display() = 0;
 };
 
 using WindowPtr = std::shared_ptr<IWindow>;
