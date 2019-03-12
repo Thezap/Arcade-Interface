@@ -8,6 +8,7 @@
 #include "IFont.hpp"
 #include "IRectangle.hpp"
 #include "ISprite.hpp"
+#include "IFont.hpp"
 #include "IText.hpp"
 #include "ITexture.hpp"
 #include "IVector2d.hpp"
@@ -124,5 +125,5 @@ using GLibPtr = std::unique_ptr<arcade::graphic::IGraphicalLibrary>;
 }
 
 extern "C" {
-arcade::graphic::GLibPtr getGraphicalLibrary();
+  arcade::graphic::GLibPtr getGraphicalLibrary();
 }

@@ -30,7 +30,7 @@ public:
    * Get the global color of the sprite
    * @return Return the sprite's color
    */
-  virtual IColor getColor() const = 0;
+  virtual ColorPtr getColor() const = 0;
 
   /**
    * Set sprite's texture

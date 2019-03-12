@@ -41,6 +41,7 @@ public:
    */
   virtual void setY(int32_t y) = 0;
 };
+    using Vector2iPtr = std::shared_ptr<IVector2i>;
 
 /**
  * Vector of float
@@ -78,3 +79,4 @@ public:
 using Vector2iPtr = std::shared_ptr<IVector2i>;
 using Vector2fPtr = std::shared_ptr<IVector2f>;
 }
+
