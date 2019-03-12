@@ -5,6 +5,7 @@
 #pragma once
 
 #include <memory>
+
 #include "ISprite.hpp"
 #include "IText.hpp"
 #include "IVector2d.hpp"
@@ -88,6 +89,16 @@ public:
    * @param sprite The sprite to display
    */
   virtual void draw(const SpritePtr sprite) = 0;
+
+  /**
+   * Clear the window
+   */
+  virtual void clear() const = 0;
+
+  /**
+   * Refresh the window
+   */
+  virtual void refresh() const = 0;
 };
 
 using WindowPtr = std::shared_ptr<IWindow>;
