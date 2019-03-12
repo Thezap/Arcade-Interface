@@ -9,7 +9,7 @@
 
 namespace arcade
 {
-class ResourceAllocator 
+class ResourceAllocator
 {
 public:
   ResourceAllocator() {};
