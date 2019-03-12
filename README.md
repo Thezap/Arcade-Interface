@@ -1,4 +1,4 @@
-## Names of gorups:
+## Names of groups:
 
 Noémie TAVIERE  -> noemie.taviere@epitech.eu
 
