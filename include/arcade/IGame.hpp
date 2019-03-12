@@ -7,7 +7,7 @@
 
 #pragma once
 
-#include "ResourceAllocator.hpp"
+#include "RessourceAllocator.hpp"
 
 namespace arcade
 {
