@@ -9,7 +9,7 @@
 
 namespace arcade
 {
-class ResourceAllocator 
+class ResourceAllocator
 {
 public:
   ResourceAllocator() {};
@@ -19,6 +19,14 @@ public:
   {
     _gLib = std::move(gLib);
   };
+
+  graphic::ColorPtr createColor()
+  {
+    graphic::ColorPtr colorptr = _gLib->createColor();
+    _colors.push_back(colorptr);
+    return (colorptr);
+  };
+
 
   graphic::ColorPtr createColor(uint8_t red, uint8_t green, uint8_t blue, uint8_t alpha)
   {

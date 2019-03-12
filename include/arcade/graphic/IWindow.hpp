@@ -37,6 +37,18 @@ public:
   virtual void copy(const IWindow &window) = 0;
 
   /**
+   * Tells if the window is open
+   * @return True if the window is open
+   */
+  virtual bool isOpen() const = 0;
+
+  /**
+   * Call to refresh the window
+   */
+  virtual void refresh() = 0;
+
+
+  /**
    * Return the window name
    * @return Window's name as string
    */

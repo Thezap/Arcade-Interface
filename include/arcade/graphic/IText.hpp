@@ -31,7 +31,7 @@ public:
    * Get the text's string
    * @return Text's string
    */
-  virtual const std::string &getString() const = 0;
+  virtual std::string &getString() const = 0;
 
   /**
    * Set the text's font
