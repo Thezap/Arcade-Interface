@@ -41,13 +41,6 @@ public:
     return (windowptr);
   };
 
-  graphic::ShapePtr createShape()
-  {
-    graphic::ShapePtr shapeptr = _gLib->createShape();
-    _shapes.push_back(shapeptr);
-    return (shapeptr);
-  };
-
   graphic::SpritePtr createSprite(graphic::TexturePtr texture)
   {
     graphic::SpritePtr spriteptr = _gLib->createSprite(texture);
@@ -90,13 +83,6 @@ public:
     return (fontptr);
   };
 
-  graphic::ShapePtr createShape()
-  {
-    graphic::ShapePtr shapeptr = _gLib->createShape();
-    _shapes.push_back(shapeptr);
-    return (shapeptr);
-  };
-
   ~ResourceAllocator() {};
 
   void copy(const ResourceAllocator &other) {};
@@ -109,6 +95,5 @@ private:
   std::list<graphic::ColorPtr> _colors;
   std::list<graphic::FontPtr> _fonts;
   std::list<graphic::TextPtr> _texts;
-  std::list<graphic::ShapePtr> _shapes;
 };
 }
