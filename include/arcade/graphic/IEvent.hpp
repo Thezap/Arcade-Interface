@@ -15,6 +15,7 @@ public:
    * Enumeration which describes every handled event
    */
   enum EventType {
+    None = -1,
     OnKeyPressed,
     OnKeyReleased,
     OnMousePressed,
