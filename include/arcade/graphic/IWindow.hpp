@@ -9,6 +9,7 @@
 #include "ISprite.hpp"
 #include "IText.hpp"
 #include "IVector2d.hpp"
+#include "IEvent.hpp"
 
 namespace arcade::graphic
 {
@@ -105,6 +106,13 @@ public:
    * Display the window
    */
   virtual void display() = 0;
+
+
+  /**
+   * Process window events
+   * @return The current event handled by the window
+   */
+  virtual EventPtr processEvent() = 0;
 };
 
 using WindowPtr = std::shared_ptr<IWindow>;
