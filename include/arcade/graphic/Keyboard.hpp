@@ -6,6 +6,9 @@
 
 namespace arcade::graphic
 {
+/**
+ * Enum with various keyboard controls
+ */
 enum Key
 {
   Unknown = -1, // Unhandled key

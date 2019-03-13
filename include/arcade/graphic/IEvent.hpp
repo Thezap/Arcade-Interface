@@ -6,6 +6,8 @@
 
 #include <memory>
 
+#include "Keyboard.hpp"
+
 namespace arcade::graphic
 {
 class IEvent
@@ -36,6 +38,12 @@ public:
    * @return The event type according to `EventType` enumeration
    */
   virtual EventType getType() = 0;
+
+  /**
+   * Get the key of event KeyPressed/KeyReleased
+   * @return Key code or None if not KeyPressed/KeyReleased
+   */
+  virtual Key getKey() = 0;
 };
 
 /**

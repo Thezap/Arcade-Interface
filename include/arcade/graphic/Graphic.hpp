@@ -116,13 +116,6 @@ public:
    * @return A new IVector2i wrapped inside a Vector2fPtr
    */
   virtual Vector2fPtr createVector2f() = 0;
-
-  /**
-   * Tells multimedia library to instantiate a new event handler to catch event in a window (stored as EventPtr)
-   * @param window Window to ctach event into
-   * @return A event handler for all events in window
-   */
-  virtual EventPtr createEvent(WindowPtr window) = 0;
 };
 
 /**
