@@ -35,7 +35,8 @@ public:
 
   /**
    * Load a texture from file
-   * @param filename path of the image file to load
+   * @param data pointer to the file data in memory
+   * @param size of the data to load in bytes 
    * @return true if loading was successful
    */
   virtual bool loadFromMemory(const void *data, std::size_t size) = 0;
