@@ -39,6 +39,12 @@ public:
    * @return reference to self
    */
   virtual IFont &IFont::operator=(const IFont &right) = 0;
+
+  /**
+   * Return the corresponding lib object
+   * @return raw pointer towards the lib object
+   */
+  virtual void *getLibObject() const = 0;
 };
 
 using FontPtr = std::shared_ptr<IFont>;

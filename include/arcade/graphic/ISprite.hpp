@@ -67,8 +67,14 @@ public:
    * @return The sprite's angle between [0, 360]
    */
   virtual float getRotation() const = 0;
+
+  /**
+   * Return the corresponding lib object
+   * @return raw pointer towards the lib object
+   */
+  virtual void *getLibObject() const = 0;
 };
 
 using SpritePtr = std::shared_ptr<ISprite>;
 
-}
+} // namespace arcade::graphic

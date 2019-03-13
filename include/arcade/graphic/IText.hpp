@@ -56,6 +56,12 @@ public:
    * @return Return character size as unsigned int
    */
   virtual unsigned int getCharacterSize() const = 0;
+
+  /**
+   * Return the corresponding lib object
+   * @return raw pointer towards the lib object
+   */
+  virtual void *getLibObject() const = 0;
 };
 
 /**
@@ -63,4 +69,4 @@ public:
  */
 using TextPtr = std::shared_ptr<IText>;
 
-}
+} // namespace arcade::graphic
