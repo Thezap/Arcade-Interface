@@ -17,6 +17,9 @@ public:
   enum EventType {
     OnKeyPressed,
     OnKeyReleased,
+    OnMousePressed,
+    OnMouseReleased,
+    OnMouseMotion,
     OnClosed,
     OnResize,
   };
