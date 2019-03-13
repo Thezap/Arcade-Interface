@@ -58,7 +58,7 @@ public:
    * @param right instance to assign
    * @return reference to self
    */
-  virtual ITexture &ITexture::operator=(const ITexture &right) = 0;
+  virtual ITexture &operator=(const ITexture &right) = 0;
 };
 
 using TexturePtr = std::shared_ptr<ITexture>;
