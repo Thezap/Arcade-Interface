@@ -42,10 +42,16 @@ public:
   virtual bool loadFromMemory(const void *data, std::size_t size) = 0;
 
   /**
-   * Load a texture from file
+   * Return the size of the texture
    * @return size in pixel as a vector
    */
   virtual IVector2i getSize() const = 0;
+
+  /**
+   * Return the corresponding lib object
+   * @return raw pointer towards the lib object
+   */
+  virtual void *getLibObject() const = 0;
 
   /**
    * Overload of assignment operator
