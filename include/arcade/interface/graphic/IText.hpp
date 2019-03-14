@@ -63,4 +63,4 @@ public:
  */
 using TextPtr = std::shared_ptr<IText>;
 
-} // namespace arcade::graphic
+} // namespace arcade::interface::graphic

@@ -44,4 +44,4 @@ public:
 
 using FontPtr = std::shared_ptr<IFont>;
 
-} // namespace arcade::graphic
+} // namespace arcade::interface::graphic

@@ -57,4 +57,4 @@ public:
 
 using TexturePtr = std::shared_ptr<ITexture>;
 
-} // namespace arcade::graphic
+} // namespace arcade::interface::graphic

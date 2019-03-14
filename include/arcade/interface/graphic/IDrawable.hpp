@@ -60,4 +60,4 @@ public:
   virtual float getRotation() const = 0;
 };
 
-} // namespace arcade::graphic
+} // namespace arcade::interface::graphic

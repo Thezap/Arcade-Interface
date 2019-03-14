@@ -55,21 +55,8 @@ public:
    * @return The position where the sprite will be rendered
    */
   virtual Vector2fPtr getPosition() const = 0;
-
-  /**
-   * Change the orientation of the current displayed sprite
-   * @param angle The orientation angle between [0, 360]
-   */
-  virtual void setRotation(float angle) = 0;
-
-  /**
-   * Get the current orientation angle of the displayed sprite
-   * @return The sprite's angle between [0, 360]
-   */
-  virtual float getRotation() const = 0;
-
 };
 
 using SpritePtr = std::shared_ptr<ISprite>;
 
-} // namespace arcade::graphic
+} // namespace arcade::interface::graphic
