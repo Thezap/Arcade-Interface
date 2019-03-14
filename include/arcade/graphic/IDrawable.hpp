@@ -18,7 +18,7 @@ public:
    * Set the text's position
    * @param vec Position to apply to vector
    */
-  virtual void setPosition(const Vector2fPtr vec) = 0;
+  virtual void setPosition(Vector2fPtr vec) = 0;
 
   /**
    * Set the text's position
@@ -39,6 +39,13 @@ public:
    * @param yOff Y axis offset
    */
   virtual void move(float xOff, float yOff) = 0;
+
+  /**
+   * Move the sprite by a given offset
+   * @param xOff X axis offset
+   * @param yOff Y axis offset
+   */
+  virtual void move(Vector2fPtr vec) = 0;
 
   /**
    * Change the orientation of the current displayed text
