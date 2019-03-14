@@ -15,7 +15,7 @@ namespace arcade
 class IGame {
 public:
   virtual ~IGame();
-  virtual void init(ResourceAllocator &manager, graphic::WindowPtr &window) = 0;
+  virtual void init(const ResourceAllocator &manager, const graphic::WindowPtr &window) = 0;
   virtual void refresh() = 0;
 };
 
