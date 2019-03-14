@@ -48,12 +48,6 @@ public:
   virtual Vector2iPtr getSize() const = 0;
 
   /**
-   * Return the corresponding lib object
-   * @return raw pointer towards the lib object
-   */
-  virtual void *getLibObject() const = 0;
-
-  /**
    * Overload of assignment operator
    * @param right instance to assign
    * @return reference to self
