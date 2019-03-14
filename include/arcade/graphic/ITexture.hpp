@@ -45,7 +45,7 @@ public:
    * Return the size of the texture
    * @return size in pixel as a vector
    */
-  virtual IVector2i getSize() const = 0;
+  virtual Vector2iPtr getSize() const = 0;
 
   /**
    * Return the corresponding lib object
@@ -58,7 +58,7 @@ public:
    * @param right instance to assign
    * @return reference to self
    */
-  virtual ITexture &ITexture::operator=(const ITexture &right) = 0;
+  virtual ITexture &operator=(const ITexture &right) = 0;
 };
 
 using TexturePtr = std::shared_ptr<ITexture>;

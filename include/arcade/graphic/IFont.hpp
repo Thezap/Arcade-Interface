@@ -38,7 +38,7 @@ public:
    * @param right instance to assign
    * @return reference to self
    */
-  virtual IFont &IFont::operator=(const IFont &right) = 0;
+  virtual IFont &operator=(const IFont &right) = 0;
 
   /**
    * Return the corresponding lib object
