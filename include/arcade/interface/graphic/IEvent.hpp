@@ -8,7 +8,7 @@
 
 #include "Keyboard.hpp"
 
-namespace arcade::graphic
+namespace arcade::interface::graphic
 {
 class IEvent
 {

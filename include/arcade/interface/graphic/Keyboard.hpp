@@ -4,7 +4,7 @@
 
 #pragma once
 
-namespace arcade::graphic
+namespace arcade::interface::graphic
 {
 /**
  * Enum with various keyboard controls

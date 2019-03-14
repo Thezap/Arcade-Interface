@@ -10,7 +10,7 @@
 #include "IVector2d.hpp"
 #include "IDrawable.hpp"
 
-namespace arcade::graphic
+namespace arcade::interface::graphic
 {
 
 class IText : public IDrawable

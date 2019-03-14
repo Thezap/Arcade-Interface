@@ -11,7 +11,7 @@
 #include "IVector2d.hpp"
 #include "IEvent.hpp"
 
-namespace arcade::graphic
+namespace arcade::interface::graphic
 {
 class IWindow
 {

@@ -7,7 +7,7 @@
 #include <memory>
 #include "IVector2d.hpp"
 
-namespace arcade::graphic
+namespace arcade::interface::graphic
 {
 
 class ITexture

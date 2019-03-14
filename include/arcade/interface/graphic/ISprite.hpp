@@ -12,7 +12,7 @@
 #include "ITexture.hpp"
 #include "IDrawable.hpp"
 
-namespace arcade::graphic
+namespace arcade::interface::graphic
 {
 
 class ISprite : public IDrawable

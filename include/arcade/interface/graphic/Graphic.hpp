@@ -15,7 +15,7 @@
 #include "IWindow.hpp"
 #include "IEvent.hpp"
 
-namespace arcade::graphic
+namespace arcade::interface::graphic
 {
 
 /**
@@ -123,9 +123,9 @@ public:
 /**
  * Shared pointer alias of IGraphicalLibrary
  */
-using GLibPtr = std::unique_ptr<arcade::graphic::IGraphicalLibrary>;
+using GLibPtr = std::unique_ptr<interface::graphic::IGraphicalLibrary>;
 }
 
 extern "C" {
-  arcade::graphic::GLibPtr getGraphicalLibrary();
+  arcade::interface::graphic::GLibPtr getGraphicalLibrary();
 }

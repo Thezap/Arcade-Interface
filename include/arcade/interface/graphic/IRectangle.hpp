@@ -7,7 +7,7 @@
 #include <cstdint>
 #include <memory>
 
-namespace arcade::graphic
+namespace arcade::interface::graphic
 {
 
 class IRectangle
