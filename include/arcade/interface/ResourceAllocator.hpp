@@ -7,13 +7,15 @@
 #include "graphic/Graphic.hpp"
 #include <list>
 
-namespace arcade
+namespace arcade::interface
 {
 class ResourceAllocator
 {
 public:
   ResourceAllocator() {};
   ResourceAllocator(ResourceAllocator const &) {};
+
+  ~ResourceAllocator() {};
 
   void setGLib(graphic::GLibPtr gLib) 
   {
@@ -90,8 +92,6 @@ public:
     _fonts.push_back(fontptr);
     return (fontptr);
   };
-
-  ~ResourceAllocator() {};
 
   void copy(const ResourceAllocator &other) {};
 

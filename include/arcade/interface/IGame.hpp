@@ -9,7 +9,7 @@
 
 #include "ResourceAllocator.hpp"
 
-namespace arcade
+namespace arcade::interface
 {
 
 class IGame {

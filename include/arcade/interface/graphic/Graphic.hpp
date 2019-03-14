@@ -24,6 +24,8 @@ namespace arcade::graphic
 class IGraphicalLibrary {
 public:
 
+  virtual ~IGraphicalLibrary() = default;
+
   /**
    * Tells multimedia library to instantiate a window
    * @return A new window stored inside a WindowPtr
