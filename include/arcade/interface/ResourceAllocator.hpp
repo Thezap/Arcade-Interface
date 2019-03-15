@@ -4,18 +4,60 @@
 
 #pragma once
 
-#include "graphic/Graphic.hpp"
 #include <list>
+#include <future>
+#include <mutex>
+
+#include "graphic/Graphic.hpp"
 
 namespace arcade::interface
 {
+/**
+ *  Singleton class
+ *  Its main goal is to call a dynamic multimedia library functions which follows
+ *  each interface specified by this API
+ */
 class ResourceAllocator
 {
-public:
-  ResourceAllocator() {};
-  ResourceAllocator(ResourceAllocator const &) {};
+private:
+  /**
+   * Constructor: do not allow to be called from outside of the class
+   * to respect the Singleton principe
+   */
+  ResourceAllocator() = default;
+  /**
+   * Destructor
+   */
+  ~ResourceAllocator() = default;
 
-  ~ResourceAllocator() {};
+public:
+  /**
+   * Do not allow copy constructor
+   */
+  ResourceAllocator(const ResourceAllocator &) = delete;
+
+  /**
+   * Do not allow assignation operator
+   * @return nothing
+   */
+  ResourceAllocator &operator=(const ResourceAllocator &) = delete;
+
+public:
+  /**
+   * Get singleton instance
+   * This implementation is thread-safe using C++11 memory model
+   * @return A ResourceAllocator raw pointer to the current instance
+   */
+  static ResourceAllocator *instance()
+  {
+    std::lock_guard<std::mutex> lock(mInstanceMutex);
+
+    if (!mInstance) {
+      mInstance = new ResourceAllocator();
+    }
+
+    return mInstance;
+  }
 
   void setGLib(graphic::GLibPtr gLib) 
   {
@@ -103,5 +145,11 @@ private:
   std::list<graphic::ColorPtr> _colors;
   std::list<graphic::FontPtr> _fonts;
   std::list<graphic::TextPtr> _texts;
+
+  static ResourceAllocator *mInstance;
+  static std::mutex mInstanceMutex;
 };
 }
+
+arcade::interface::ResourceAllocator *arcade::interface::ResourceAllocator::mInstance = nullptr;
+std::mutex arcade::interface::ResourceAllocator::mInstanceMutex;
