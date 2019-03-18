@@ -19,4 +19,13 @@ public:
   virtual void refresh() = 0;
 };
 
+/**
+ * Shared pointer alias of IGame
+ */
+using GamePtr = std::unique_ptr<IGame>;
+
+}
+
+extern "C" {
+  arcade::interface::GamePtr getGameLibrary();
 }
