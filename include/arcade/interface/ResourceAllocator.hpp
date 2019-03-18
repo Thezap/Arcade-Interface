@@ -10,7 +10,7 @@
 
 #include "graphic/Graphic.hpp"
 
-namespace arcade::interface
+ namespace arcade::interface
 {
 /**
  *  Singleton class
@@ -50,6 +50,9 @@ public:
    */
   static ResourceAllocator *instance()
   {
+    static std::mutex mInstanceMutex;
+    static ResourceAllocator *mInstance{nullptr};
+
     std::lock_guard<std::mutex> lock(mInstanceMutex);
 
     if (!mInstance) {
@@ -145,11 +148,5 @@ private:
   std::list<graphic::ColorPtr> _colors;
   std::list<graphic::FontPtr> _fonts;
   std::list<graphic::TextPtr> _texts;
-
-  static ResourceAllocator *mInstance;
-  static std::mutex mInstanceMutex;
 };
 }
-
-arcade::interface::ResourceAllocator *arcade::interface::ResourceAllocator::mInstance = nullptr;
-std::mutex arcade::interface::ResourceAllocator::mInstanceMutex;
