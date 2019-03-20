@@ -32,16 +32,8 @@ public:
    * @return true if loading was successful
    */
   virtual bool loadFromMemory(const void *data, std::size_t size) = 0;
-
-  /**
-   * Overload of assignment operator
-   * @param right instance to assign
-   * @return reference to self
-   */
-  virtual IFont &operator=(const IFont &right) = 0;
-
 };
 
 using FontPtr = std::shared_ptr<IFont>;
 
-} // namespace arcade::interface::graphic
+} // namespace arcade::graphic
