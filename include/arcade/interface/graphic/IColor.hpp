@@ -33,7 +33,7 @@ public:
 
   /**
    * Get Red color in range [0, 255]
-   * @eturn 8-bits unsigned int
+   * @return 8-bits unsigned int
    */
   virtual uint8_t getRed() const = 0;
 
