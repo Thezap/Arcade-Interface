@@ -10,8 +10,13 @@
 namespace arcade::interface::graphic
 {
 
+class IRectangle;
+
+using RectanglePtr = std::shared_ptr<IRectangle>;
+
 class IRectangle
 {
+public:
   virtual ~IRectangle() = 0;
 
   /**
@@ -20,7 +25,7 @@ class IRectangle
    * @param y y coordinate
    * @return true if the point is inside or false if not
    */
-  virtual bool contains(int64_t x, int64_t y) const noexcept = 0;
+  virtual bool contains(int32_t x, int32_t y) const noexcept = 0;
 
   /**
    * Check if a rectangle intersects this rectangle
@@ -51,52 +56,51 @@ class IRectangle
 
   /**
    * Return the left coord of the rectangle
-   * @return Left coordinate of rectangle as int64_t
+   * @return Left coordinate of rectangle as int32_t
    */
-  virtual int64_t getLeft() const = 0;
+  virtual int32_t getLeft() const = 0;
 
   /**
    * Set the left coord of the rectangle
-   * @param leftCoord Left coordinate as int64_t to apply to rectangle
+   * @param leftCoord Left coordinate as int32_t to apply to rectangle
    */
-  virtual void setLeft(int64_t leftCoord) = 0;
+  virtual void setLeft(int32_t leftCoord) = 0;
 
   /**
    * Return the top coord of the rectangle
-   * @return Top coordinate of rectangle as int64_t
+   * @return Top coordinate of rectangle as int32_t
    */
-  virtual int64_t getTop() const = 0;
+  virtual int32_t getTop() const = 0;
 
   /**
    * Set the top coord of the rectangle
-   * @param topCoord Top coordinate as int64_t to apply to rectangle
+   * @param topCoord Top coordinate as int32_t to apply to rectangle
    */
-  virtual void setTop(int64_t topCoord) = 0;
+  virtual void setTop(int32_t topCoord) = 0;
 
   /**
    * Return the rectangle current width
-   * @return Rectangle width as int64_t
+   * @return Rectangle width as int32_t
    */
-  virtual int64_t getWidth() const = 0;
+  virtual int32_t getWidth() const = 0;
 
   /**
    * Set the rectangle width
-   * @param width Width as int64_t to apply to rectangle
+   * @param width Width as int32_t to apply to rectangle
    */
-  virtual void setWidth(int64_t width) = 0;
+  virtual void setWidth(int32_t width) = 0;
 
   /**
    * Get the rectangle height
-   * @return Rectangle height as int64_t
+   * @return Rectangle height as int32_t
    */
-  virtual int64_t getHeight() const = 0;
+  virtual int32_t getHeight() const = 0;
 
   /**
    * Set the rectangle height
-   * @param height Height as int64_t to apply to rectangle
+   * @param height Height as int32_t to apply to rectangle
    */
-  virtual void setHeight(int64_t height) = 0;
+  virtual void setHeight(int32_t height) = 0;
 };
 
-using RectanglePtr = std::shared_ptr<IRectangle>;
 }
