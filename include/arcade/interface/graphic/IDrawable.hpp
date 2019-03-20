@@ -9,10 +9,9 @@ class IDrawable
 {
 public:
   /**
-   * Return the wrapped object of target lib as void *
-   * @return Wrapped object
+   * Destructor
    */
-  virtual void *getDrawable() = 0;
+  virtual ~IDrawable() = default;
 
   /**
    * Set the text's position
@@ -60,4 +59,4 @@ public:
   virtual float getRotation() const = 0;
 };
 
-} // namespace arcade::interface::graphic
+} // namespace arcade::graphic
