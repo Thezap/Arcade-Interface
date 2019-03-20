@@ -24,7 +24,7 @@ public:
    * Set the global color of the sprite
    * @param color Color to apply
    */
-  virtual void setColor(const IColor &color) = 0;
+  virtual void setColor(ColorPtr color) = 0;
 
   /**
    * Get the global color of the sprite
@@ -49,14 +49,8 @@ public:
    * @param rect The area represented by a IRectangle
    */
   virtual void setTextureRect(const IRectangle &rect) = 0;
-
-  /**
-   * Get the sprite position
-   * @return The position where the sprite will be rendered
-   */
-  virtual Vector2fPtr getPosition() const = 0;
 };
 
 using SpritePtr = std::shared_ptr<ISprite>;
 
-} // namespace arcade::interface::graphic
+} // namespace arcade::graphic
