@@ -46,15 +46,8 @@ public:
    * @return size in pixel as a vector
    */
   virtual Vector2iPtr getSize() const = 0;
-
-  /**
-   * Overload of assignment operator
-   * @param right instance to assign
-   * @return reference to self
-   */
-  virtual ITexture &operator=(const ITexture &right) = 0;
 };
 
 using TexturePtr = std::shared_ptr<ITexture>;
 
-} // namespace arcade::interface::graphic
+} // namespace arcade::graphic

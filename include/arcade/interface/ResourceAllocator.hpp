@@ -10,7 +10,7 @@
 
 #include "graphic/Graphic.hpp"
 
- namespace arcade::interface
+namespace arcade::interface
 {
 /**
  *  Singleton class
@@ -50,9 +50,6 @@ public:
    */
   static ResourceAllocator *instance()
   {
-    static std::mutex mInstanceMutex;
-    static ResourceAllocator *mInstance{nullptr};
-
     std::lock_guard<std::mutex> lock(mInstanceMutex);
 
     if (!mInstance) {
@@ -138,6 +135,45 @@ public:
     return (fontptr);
   };
 
+  graphic::RectanglePtr createRectangle()
+  {
+    graphic::RectanglePtr rectanglePtr = _gLib->createRectangle();
+    _rects.push_back(rectanglePtr);
+    return rectanglePtr;
+  }
+  graphic::RectanglePtr createRectangle(int top, int left, int width, int height)
+  {
+    graphic::RectanglePtr rectanglePtr = _gLib->createRectangle(top, left, width, height);
+    _rects.push_back(rectanglePtr);
+    return rectanglePtr;
+  }
+
+  graphic::Vector2iPtr createVector2i()
+  {
+    graphic::Vector2iPtr vec = _gLib->createVector2i();
+    _vec2i.push_back(vec);
+    return vec;
+  }
+  graphic::Vector2iPtr createVector2i(int x, int y)
+  {
+    graphic::Vector2iPtr vec = _gLib->createVector2i(x, y);
+    _vec2i.push_back(vec);
+    return vec;
+  }
+
+  graphic::Vector2fPtr createVector2f()
+  {
+    graphic::Vector2fPtr vec = _gLib->createVector2f();
+    _vec2f.push_back(vec);
+    return vec;
+  }
+  graphic::Vector2fPtr createVector2f(float x, float y)
+  {
+    graphic::Vector2fPtr vec = _gLib->createVector2f(x, y);
+    _vec2f.push_back(vec);
+    return vec;
+  }
+
   void copy(const ResourceAllocator &other) {};
 
 private:
@@ -148,5 +184,14 @@ private:
   std::list<graphic::ColorPtr> _colors;
   std::list<graphic::FontPtr> _fonts;
   std::list<graphic::TextPtr> _texts;
+  std::list<graphic::RectanglePtr> _rects;
+  std::list<graphic::Vector2iPtr> _vec2i;
+  std::list<graphic::Vector2fPtr> _vec2f;
+
+  static ResourceAllocator *mInstance;
+  static std::mutex mInstanceMutex;
 };
+
+ResourceAllocator *ResourceAllocator::mInstance = nullptr;
+std::mutex ResourceAllocator::mInstanceMutex;
 }
