@@ -106,18 +106,21 @@ public:
    * @return A new IRectangle wrapped inside a RectanglePtr
    */
   virtual RectanglePtr createRectangle() = 0;
+  virtual RectanglePtr createRectangle(int top, int left, int width, int height) = 0;
 
   /**
    * Tells multimedia library to instantiate a new vector of 2 ints
    * @return A new IVector2i wrapped inside a Vector2iPtr
    */
   virtual Vector2iPtr createVector2i() = 0;
+  virtual Vector2iPtr createVector2i(int x, int y) = 0;
 
   /**
    * Tells multimedia library to instantiate a new vector of 2 floats
    * @return A new IVector2i wrapped inside a Vector2fPtr
    */
   virtual Vector2fPtr createVector2f() = 0;
+  virtual Vector2fPtr createVector2f(float x, float y) = 0;
 };
 
 /**
