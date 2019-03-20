@@ -50,6 +50,8 @@ public:
    */
   static ResourceAllocator *instance()
   {
+    static std::mutex mInstanceMutex;
+    static ResourceAllocator *mInstance{nullptr};
     std::lock_guard<std::mutex> lock(mInstanceMutex);
 
     if (!mInstance) {
@@ -192,6 +194,4 @@ private:
   static std::mutex mInstanceMutex;
 };
 
-ResourceAllocator *ResourceAllocator::mInstance = nullptr;
-std::mutex ResourceAllocator::mInstanceMutex;
 }

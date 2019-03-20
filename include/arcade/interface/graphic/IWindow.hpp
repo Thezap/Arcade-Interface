@@ -109,10 +109,16 @@ public:
 
 
   /**
-   * Process window events
+   * Process window event
    * @return The current event handled by the window
    */
   virtual EventPtr processEvent() = 0;
+
+  /**
+   * Get last event processed
+   * @return The last event of the window
+   */
+  virtual EventPtr getCurrentEvent() = 0;
 };
 
 using WindowPtr = std::shared_ptr<IWindow>;
