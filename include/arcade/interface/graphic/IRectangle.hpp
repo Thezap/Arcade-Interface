@@ -17,7 +17,7 @@ using RectanglePtr = std::shared_ptr<IRectangle>;
 class IRectangle
 {
 public:
-  virtual ~IRectangle() = 0;
+  virtual ~IRectangle() = default;
 
   /**
    * Check if a point is inside the rectangle's area
@@ -46,13 +46,6 @@ public:
    * @return true if the rectangle equals the other one or false if not
    */
   virtual bool operator!=(const IRectangle &other) const = 0;
-
-  /**
-   * Copy assignment operator
-   * @param other Rectangle data to assign to this rectangle
-   * @return IRectangle ref
-   */
-  virtual IRectangle &operator=(const IRectangle &other) = 0;
 
   /**
    * Return the left coord of the rectangle
