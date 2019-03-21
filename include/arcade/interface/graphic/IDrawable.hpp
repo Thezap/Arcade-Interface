@@ -57,6 +57,18 @@ public:
    * @return The sprite's angle between [0, 360]
    */
   virtual float getRotation() const = 0;
+
+  /**
+  * Set the global color of the sprite
+  * @param color Color to apply
+  */
+  virtual void setColor(ColorPtr color) = 0;
+
+  /**
+  * Get the global color of the sprite
+  * @return Return the sprite's color
+  */
+  virtual ColorPtr getColor() const = 0;
 };
 
 } // namespace arcade::graphic
