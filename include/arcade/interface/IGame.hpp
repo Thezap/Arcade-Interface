@@ -17,6 +17,7 @@ public:
   virtual ~IGame() = default;
   virtual void init(ResourceAllocator *manager, const graphic::WindowPtr &window) = 0;
   virtual void refresh() = 0;
+  virtual void handleEvent() = 0;
 };
 
 /**
