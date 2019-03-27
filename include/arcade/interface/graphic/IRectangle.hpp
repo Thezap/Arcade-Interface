@@ -32,20 +32,7 @@ public:
    * @param other Other rectangle
    * @return true if the rectangle intersects this one or false if not
    */
-  virtual bool intersects(const IRectangle &other) = 0;
-
-  /**
-   * Check if a rectangle equals another
-   * @param other Other rectangle
-   * @return true if the rectangle equals the other one or false if not
-   */
-  virtual bool operator==(const IRectangle &other) const = 0;
-  /**
-   * Check if a rectangle doest not equal another
-   * @param other Other rectangle
-   * @return true if the rectangle equals the other one or false if not
-   */
-  virtual bool operator!=(const IRectangle &other) const = 0;
+  virtual bool intersects(RectanglePtr other) = 0;
 
   /**
    * Return the left coord of the rectangle

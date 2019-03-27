@@ -36,7 +36,13 @@ public:
    * Set the area of the texture the sprite should use
    * @param rect The area represented by a IRectangle
    */
-  virtual void setTextureRect(const IRectangle &rect) = 0;
+  virtual void setTextureRect(RectanglePtr rect) = 0;
+
+  /**
+   * Get the area of the texture the sprite should use
+   * @return rect The area represented by a IRectangle
+   */
+  virtual RectanglePtr getTextureRect() = 0;
 };
 
 using SpritePtr = std::shared_ptr<ISprite>;

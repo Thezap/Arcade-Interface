@@ -32,6 +32,13 @@ public:
    * @return true if loading was successful
    */
   virtual bool loadFromMemory(const void *data, std::size_t size) = 0;
+
+  /**
+   * Get path to the font
+   * @return path to the font
+   */
+
+  virtual std::string getFontPath() const = 0;
 };
 
 using FontPtr = std::shared_ptr<IFont>;

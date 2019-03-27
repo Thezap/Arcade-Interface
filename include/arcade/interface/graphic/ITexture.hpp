@@ -46,6 +46,12 @@ public:
    * @return size in pixel as a vector
    */
   virtual Vector2iPtr getSize() const = 0;
+
+  /**
+   * Return the path to the texture
+   * @return return the path to the texture
+   */
+  virtual std::string getTexturePath() const = 0;
 };
 
 using TexturePtr = std::shared_ptr<ITexture>;

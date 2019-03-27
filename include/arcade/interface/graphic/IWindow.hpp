@@ -32,12 +32,6 @@ public:
   virtual ~IWindow() = default;
 
   /**
-   * Copy the window
-   * @param window
-   */
-  virtual void copy(const IWindow &window) = 0;
-
-  /**
    * Tells if the window is open
    * @return True if the window is open
    */

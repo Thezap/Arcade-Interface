@@ -176,7 +176,62 @@ public:
     return vec;
   }
 
-  void copy(const ResourceAllocator &other) {};
+  void copy(graphic::GLibPtr newGLib) {
+    _gLib = std::move(newGLib);
+    for (auto it = _windows.begin(); it != _windows.end(); it++) {
+      auto win = _gLib->createWindow();
+      win->setName((*it)->getName());
+      win->setSize((*it)->getSize());
+      (*it) = win;
+    }
+    for (auto it = _textures.begin(); it != _textures.end(); it++) {
+      graphic::TexturePtr texture;
+      std::string nameTexture = (*it)->getTexturePath();
+      if (nameTexture == "")
+        texture = _gLib->createTexture();
+      else
+        texture = _gLib->createTexture(nameTexture);
+      (*it) = texture;
+    }
+    for (auto it = _sprites.begin(); it != _sprites.end(); it++) {
+      auto sprite = _gLib->createSprite();
+      sprite->setTexture((*it)->getTexture());
+      //sprite->setColor((*it)->getColor());
+      sprite->setRotation((*it)->getRotation());
+      sprite->setTextureRect((*it)->getTextureRect());
+      sprite->setPosition((*it)->getPosition());
+      (*it) = sprite;
+    }
+    for (auto it = _colors.begin(); it != _colors.end(); it++) {
+      auto color = _gLib->createColor((*it)->getColor());
+      (*it) = color;
+    }
+    for (auto it = _fonts.begin(); it != _fonts.end(); it++) {
+      auto font = _gLib->createFont((*it)->getFontPath());
+      (*it) = font;
+    }
+    for (auto it = _texts.begin(); it != _texts.end(); it++) {
+      auto text = _gLib->createText((*it)->getFont());
+      //text->setColor((*it)->getColor());
+      text->setRotation((*it)->getRotation());
+      text->setPosition((*it)->getPosition());
+      text->setCharacterSize((*it)->getCharacterSize());
+      text->setString((*it)->getString());
+      (*it) = text;
+    }
+    for (auto it = _rects.begin(); it != _rects.end(); it++) {
+      auto rect = _gLib->createRectangle((*it)->getTop(), (*it)->getLeft(), (*it)->getWidth(), (*it)->getHeight());
+      (*it) = rect;
+    }
+    for (auto it = _vec2i.begin(); it != _vec2i.end(); it++) {
+      auto vec2i = _gLib->createVector2i((*it)->getX(), (*it)->getY());
+      (*it) = vec2i;
+    }
+    for (auto it = _vec2f.begin(); it != _vec2f.end(); it++) {
+      auto vec2f = _gLib->createVector2f((*it)->getX(), (*it)->getY());
+      (*it) = vec2f;
+    }
+  }
 
 private:
   graphic::GLibPtr _gLib;

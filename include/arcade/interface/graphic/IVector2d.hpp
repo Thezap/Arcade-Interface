@@ -20,6 +20,7 @@ public:
    * Default desctructor
    */
   virtual ~IVector2i() = default;
+
   /**
    * Get X from vector as int
    * @return X

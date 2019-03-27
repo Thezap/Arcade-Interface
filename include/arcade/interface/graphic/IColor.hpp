@@ -22,7 +22,6 @@ class IColor
 {
 public:
   virtual ~IColor() = default;
-  virtual void copy(const IColor &color) = 0;
 
   /**
    * Get Color as a 32-bits unsigned integer
