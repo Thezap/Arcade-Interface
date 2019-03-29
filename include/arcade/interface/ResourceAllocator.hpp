@@ -194,8 +194,9 @@ public:
       (*it) = texture;
     }
     for (auto it = _sprites.begin(); it != _sprites.end(); it++) {
+      auto texture = _gLib->createTexture((*it)->getTexture()->getTexturePath());
       auto sprite = _gLib->createSprite();
-      sprite->setTexture((*it)->getTexture());
+      sprite->setTexture(texture);
       //sprite->setColor((*it)->getColor());
       sprite->setRotation((*it)->getRotation());
       sprite->setTextureRect((*it)->getTextureRect());
@@ -211,7 +212,8 @@ public:
       (*it) = font;
     }
     for (auto it = _texts.begin(); it != _texts.end(); it++) {
-      auto text = _gLib->createText((*it)->getFont());
+      auto font = _gLib->createFont((*it)->getFont()->getFontPath());
+      auto text = _gLib->createText(font);
       //text->setColor((*it)->getColor());
       text->setRotation((*it)->getRotation());
       text->setPosition((*it)->getPosition());
@@ -247,6 +249,6 @@ private:
 
   static ResourceAllocator *mInstance;
   static std::mutex mInstanceMutex;
-};
+}; 
 
 }
